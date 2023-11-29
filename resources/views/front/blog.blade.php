@@ -24,8 +24,8 @@
                     <div class="col-12">
                         <img class="w-100 h-auto object-fit-contain" src="{{asset('assets/front/img/buyuk-line.svg')}}" alt="">
                     </div>
-                    <div class="col-12 d-flex justify-content-center pt-5">
-                        <img class="w-75 h-auto object-fit-contain" src="{{ asset('storage/bloglar/'.$blog->fotograf) }}" alt="">
+                    <div class="col-12 d-flex justify-content-center pt-5 blog-image">
+                        <img class="w-75 h-auto object-fit-cover" src="{{ asset('storage/bloglar/'.$blog->fotograf) }}" alt="">
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 text-center">
                         @php
                              $icerik = str_replace("../uploads/","/uploads/",$blog->icerik)
                         @endphp

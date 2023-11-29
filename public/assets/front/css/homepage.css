@@ -666,6 +666,12 @@ footer{
     object-fit: cover;
     max-height: 350px;
 }
+.blog-image{
+    max-height: 700px;
+}
+.blog-image img{
+    object-fit: cover;
+}
 
 
 @media screen and (min-width: 768px) {
