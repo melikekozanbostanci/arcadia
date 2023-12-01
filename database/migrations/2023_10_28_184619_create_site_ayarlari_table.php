@@ -29,6 +29,32 @@ return new class extends Migration
             $table->string('site_youtube')->nullable();
             $table->longText('site_google_harita')->nullable();
             $table->string('site_google_analytics')->nullable();
+
+            $table->string('fotograf_ana')->nullable();
+            $table->string('fotograf_ana_baslik')->nullable();
+            $table->string('baslik_1')->nullable();
+            $table->string('alt_baslik_1')->nullable();
+            $table->string('aciklama_1')->nullable();
+            $table->string('fotograf_1')->nullable();
+            $table->string('fotograf_yazi_1')->nullable();
+            $table->string('fotograf_yazi_2')->nullable();
+            $table->string('baslik_2')->nullable();
+            $table->string('alt_baslik_2')->nullable();
+            $table->string('aciklama_2_1')->nullable();
+            $table->string('aciklama_2_2')->nullable();
+            $table->string('fotograf_2')->nullable();
+            $table->string('fotograf_3')->nullable();
+            $table->string('baslik_3')->nullable();
+            $table->string('alt_baslik_3')->nullable();
+            $table->string('aciklama_3')->nullable();
+            $table->string('fotograf_4')->nullable();
+            $table->string('fotograf_5')->nullable();
+            $table->string('fotograf_6')->nullable();
+            $table->string('fotograf_7')->nullable();
+            $table->string('fotograf_8')->nullable();
+
+
+
             $table->timestamps();
         });
     }

@@ -125,7 +125,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6 d-flex align-items-end justify-content-end">
+            <div class="col-md-12 d-flex align-items-end justify-content-end">
                 <button type="submit" class="btn btn-primary mb-2">Kaydet</button>
             </div>
         </div>
