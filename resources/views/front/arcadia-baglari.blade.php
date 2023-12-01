@@ -5,7 +5,11 @@
     <!-- main-area -->
     <main>
         <section class="position-relative">
-            <img class="w-100 baslik-foto" src="{{ asset('assets/front/img/baglar.png') }}" alt="">
+            @if($baglar->fotograf_ana)
+                <img class="w-100 baslik-foto" src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_ana) }}" alt="">
+            @else
+                <img class="w-100 baslik-foto" src="{{ asset('assets/front/img/baglar.png') }}" alt="">
+            @endif
             <div class="position-absolute arcadia">
                 <p class="text-center text-white">ARCADIA BAĞLARI</p>
             </div>
@@ -68,39 +72,15 @@
                                     <div class="container mt-3 ">
                                         <div class="row d-flex justify-content-center pb-5">
                                             <div class="col-md-6 col-sm-12 mt-md-5">
-                                                <p class="title-homepage m-0">BAĞLARIN ÖYKÜSÜ & TARİHİ ŞARAP YOLU</p>
+                                                <p class="title-homepage m-0">{{$baglar->baslik_arcadia}}</p>
                                                 <p class="sub-title-homepage d-flex justify-content-start align-items-center">
                                                     <img src="{{asset('assets/front/img/line.svg')}}" alt="">
-                                                    <span>Arcadia Bağları </span>
+                                                    <span>{{$baglar->alt_baslik_arcadia}} </span>
                                                 </p>
                                             </div>
                                             <div class="col-md-6 col-sm-12 mt-md-5 mt-sm-2">
                                                 <p class="paragraph-detail">
-                                                    2002 yılında Arcadia Bağları’nı projelendirmeye ve bağlar için yer
-                                                    bakmaya başladığımızda köklü şarapçılık ve üzümcülük geçmişi olan
-                                                    Ege Bölgesi ve Trakya’ya öncelik verdik. Zamanla arayışımız kuzeye
-                                                    yöneldi. Trakya’nın her köşesini gezdik ve yaklaşık 15.000 km yol
-                                                    yaptık, toprak analizleri aldık, hava durumu verilerini inceledik.
-                                                    Uzun bir araştırma döneminden sonra Lüleburgaz’ın kuzeyi ile
-                                                    Istranca Dağları arasındaki bölgede yer alan ve coğrafi yapısı uygun
-                                                    mikroklima özellikleri gösteren Arcadia Bağları’nın bugünkü arazisi,
-                                                    bizi çok heyecanlandırdı. Danışmanlarımızla birlikte bütün verileri
-                                                    önümüze koyduk ve buranın projemiz için en uygun arazi olduğunu
-                                                    gördük.
-
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Uygun toprağın bulunmasından sonra toprak hazırlığı ve cins seçimi
-                                                    için geçirilen yoğun bir hazırlık döneminin sonunda bağlarımızı
-                                                    diktik.
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Arcadia Bağları’nın batısından, Üsküp üzerinden İğneada ve Kıyıköy’e
-                                                    uzanan eski haritalarda “Şarap Yolu” ismiyle anılan bir yol geçiyor.
-                                                    Tarihte, burada üretilen şarapların büyük küpler ve fıçılar
-                                                    içerisinde, manda arabalarıyla İğneada ve Kıyıköy’e götürülerek,
-                                                    buradan gemilere yüklenip İtalya ve Fransa’ya gönderildiği
-                                                    biliniyor.
+                                                    {!! $baglar->aciklama_arcadia_alan1 !!}
                                                 </p>
 
                                             </div>
@@ -111,62 +91,34 @@
                                 <section>
                                     <div class="container-fluid py-5 position-relative arc-bg">
                                         <div class="container">
-                                            <div class="row py-md-5">
+                                            <div class="row py-lg-5">
                                                 <div class="col-lg-6 col-sm-12">
                                                     <p class="arc-title text-center">
-                                                        TARİHİ ŞARAP YOLU HAKKINDA
+                                                        {{$baglar->baslik_arcadia_alan2_1}}
                                                     </p>
                                                 </div>
-                                                <div class="col-lg-6 col-sm-12 arc-abs">
-                                                    <img class="w-50"
-                                                         src="{{asset('assets/front/img/arc-title.png')}}" alt="">
+                                                <div class="col-lg-6 col-sm-12 arc-abs d-flex justify-content-end">
+                                                    @if($baglar->fotograf_arcadia_1)
+                                                        <img class="w-75 img-fluid"
+                                                             src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_1) }}" alt="">
+                                                        @else
+                                                        <img class="w-75 img-fluid"
+                                                             src="{{asset('assets/front/img/arc-title.png')}}" alt="">
+                                                    @endif
                                                 </div>
 
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-12">
                                                     <p class="paragraph-detail">
-                                                        Kırklareli, tarih boyunca; bağları ve şarapları ile anılmasına
-                                                        rağmen, bağlar zamanla azalmış ve şarapçılık yok olma noktasına
-                                                        gelmiş. Kırklareli’nin çok az tanınan eski köyleri üzerinden,
-                                                        Kıyıköy’e şarap taşımak için yapılmış tarihi bir yol var.
-                                                        Tarihte
-                                                        burada üretilen şarapların büyük küpler ve fıçılar içerisinde,
-                                                        manda
-                                                        arabalarıyla Kıyıköy’e götürülerek, buradan gemilere yüklenerek
-                                                        Venedik ve Marsilya’ya gönderildiği biliniyor. Üsküp üzerinden
-                                                        İğneada’ya, Kıyıköy’e geçen, limanlara şarapların taşındığı bu
-                                                        yollar eski haritalarda “Şarap Yolu” adıyla geçiyor.
+                                                        {!! $baglar->aciklama_arcadia_alan2_1 !!}
                                                     </p>
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 pb-5">
-                                                    <p class="paragraph-detail">Tarihi Şarap Yolu, Arcadia Bağları’nın
-                                                        tam
-                                                        karşısında yer alan
-                                                        Çeşmekolu Köyü’nün arkasında bulunuyor. Arcadia Bağları’nın
-                                                        kurulu
-                                                        olduğu arazi eski haritalarda Bağlık Yakası olarak anılıyor.</p>
-                                                    <p class="paragraph-detail">19. yüzyıl sonlarında Fransa’da
-                                                        filoksera
-                                                        isimli zararlının yayılması
-                                                        ile bağların %95’i yok olmuş ve Amerikan anacına aşılı
-                                                        fidanlarla
-                                                        yeniden dikimi yapılmış. Bu yeni dikilen bağlardan verim alınana
-                                                        kadar yaklaşık 5 yıllık bir süreçte Fransa, Osmanlı
-                                                        İmparatorluğu
-                                                        ile yapmış olduğu Kapitülasyonlar çerçevesinde şarap ihtiyacının
-                                                        çoğunu Trakya ve Ege’den dökme şarap olarak karşılamış. Bu
-                                                        dönemde
-                                                        Kırklareli’nden de Fransa’ya şarap ihraç edildiği biliniyor.</p>
-                                                    <p class="paragraph-detail pb-5">
-                                                        Arcadia Bağları projesinin başlıca amacı bu uyuyan potansiyeli
-                                                        canlandırarak, bölgede yetişen üzümlerle üretilecek, bu toprağın
-                                                        özel lezzetlerini yansıtan, içimine kadar yaşamaya devam eden,
-                                                        doğal
-                                                        ve özgün, dünya standardında Teruar Şarapları üreterek, tarihte
-                                                        olduğu gibi Kuzeydoğu Trakya’da Tarihi Şarap Yolu’nun geçtiği
-                                                        bölgeden, şarapların yeniden dünyaya ulaşabilmesini sağlamak.
+                                                    <p class="paragraph-detail">
+                                                        {!! $baglar->aciklama_arcadia_alan2_2 !!}
                                                     </p>
+
                                                 </div>
                                             </div>
                                             <div class="row position-relative py-5">
@@ -178,33 +130,23 @@
                                             <div class="row d-flex align-items-end position-relative pt-md-5">
                                                 <div class="col-lg-6 col-sm-12 d-flex flex-column">
                                                     <p class="arc-title text-center">
-                                                        ARKADIA İSMİNİN ANLAMI
+                                                        {{$baglar->baslik_arcadia_alan3_1}}
                                                     </p>
-                                                    <p class="paragraph-detail">Bağların bulunduğu köy Lüleburgaz’a
-                                                        bağlı. Lüleburgaz’ın eski ismi ise Arcadiapolis. Ayrıca
-                                                        mitolojide Arcadia, “yeryüzünde cenneti andıran eşsiz güzellikte
-                                                        bahçe” anlamında kullanılıyor. Hem yerel oluşunu hem de
-                                                        mitolojik anlamını çok yakıştırdık ve bağlarımıza Arcadia
-                                                        Bağları ismini verdik.</p>
-                                                    <p class="paragraph-detail">Istranca bağlarının güneyinde, tarihi
-                                                        Şarap Yolu’nun geçtiği topraklarda, Çeşmekolu ve Hamitabat
-                                                        köyleri arasında, 150 metre rakımda dikilen Arcadia Bağları,
-                                                        Trakya’nın tam orta noktasında, karasal iklim özellikleri
-                                                        gösteren, gece gündüz sıcaklık farklarının yüksek olduğu bir
-                                                        konumda yer alıyor. </p>
                                                     <p class="paragraph-detail">
-                                                        Toprak yapısı, iklim koşulları ve Türkiye’nin kuzeybatı ucunda
-                                                        bir bölgede, özel bir coğrafyada yer almanın avantajını
-                                                        kullanarak, Arcadia’da beyaz, roze, kırmızı, köpüklü ve asil
-                                                        küflü olmak üzere, zengin bir yelpazede teruar şarapları
-                                                        üretiyoruz.
+                                                        {!! $baglar->aciklama_arcadia_alan3_1 !!}
                                                     </p>
                                                 </div>
                                                 <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
                                                     <div>
-                                                        <img class="w-100"
-                                                             src="{{asset('assets/front/img/tr-map.png')}}"
-                                                             alt="">
+                                                        @if($baglar->fotograf_arcadia_2)
+                                                            <a data-fancybox="gallery" data-src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_2) }}">
+                                                                <img class="w-100 baslik-foto" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_2) }}"/>
+                                                            </a>
+                                                        @else
+                                                            <a data-fancybox="gallery" data-src="{{asset('assets/front/img/arc-title.png')}}">
+                                                                <img class="w-100 baslik-foto" src="{{asset('assets/front/img/arc-title.png')}}"/>
+                                                            </a>
+                                                        @endif
                                                     </div>
 
                                                 </div>
@@ -221,45 +163,27 @@
                                     <div class="container mt-3">
                                         <div class="row d-flex justify-content-center pb-5">
                                             <div class="col-md-6 col-sm-12 mt-md-5">
-                                                <p class="title-homepage m-0">ÜZÜMLERİMİZ</p>
+                                                <p class="title-homepage m-0">{{$baglar->baslik_uzum}}</p>
                                                 <p class="sub-title-homepage d-flex justify-content-start align-items-center">
                                                     <img src="{{asset('assets/front/img/line.svg')}}" alt="">
-                                                    <span>Arcadia Bağları </span>
+                                                    <span>{{$baglar->alt_baslik_uzum}} </span>
                                                 </p>
                                             </div>
                                             <div class="col-md-6 col-sm-12 mt-md-5 mt-sm-2">
                                                 <p class="paragraph-detail">
-                                                    Bağlardan gelen lezzetleri eksiksiz hissettiren teruar şarabı
-                                                    üretebilmek için, bağların kurulumundan üretim süreçlerinin seçimine
-                                                    kadar her aşamada hassas, minimum müdahale gerektirecek yöntemleri
-                                                    tercih ettik.
-
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Arcadia ürünlerini kendi bağlarımızda yetişen üzümlerden üretiyoruz.
-                                                    350 dekarlık bağ arazisinde on farklı cins üzüm yetiştiriyoruz;
-                                                    Cabernet Franc, Cabernet Sauvignon, Merlot, Papaskarası, Sangiovese,
-                                                    Petit Verdot, Sauvignon Blanc, Sauvignon Gris, Pinot Gris ve
-                                                    Narince.
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Bunların yanında Ar-ge parselimizde faklı üzümlerle çalışıyor,
-                                                    aralarından seçtiklerimizi süreç içinde üretime ekliyoruz.
+                                                    {!! $baglar->aciklama_uzum_alan1 !!}
                                                 </p>
 
                                             </div>
                                         </div>
                                     </div>
                                 </section>
-                                <section>
-                                    <div class="container-fluid">
-                                        <div class="row pb-md-5">
-                                            <div class="col-12">
-                                                <div>
-                                                    <img class="w-100"
-                                                         src="{{asset('assets/front/img/det-uzum.png')}}" alt="">
-                                                </div>
-                                            </div>
+                                <section class="pb-md-5 position-relative">
+                                    <img class="img-fluid " src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_1) }}" alt="">
+                                    <div class="position-absolute text-center top-0 text-white fs-4 w-100 letter-space pt-3">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <p>{!! $baglar->fotograf_uzum_1_aciklama !!}</p>
+                                            <p>{!! $baglar->fotograf_uzum_1_aciklama2 !!}</p>
                                         </div>
                                     </div>
                                 </section>
@@ -268,66 +192,32 @@
                                         <div class="row">
                                             <div class="col-md-6 col-sm-12 ">
                                                 <p class="paragraph-detail">
-                                                    Teruarımızı dinleyerek, onun bize öğrettikleriyle, beyaz
-                                                    şaraplara özel bir çalışma yapmaya karar verdik: yoğun meyve
-                                                    aromaları barındıran, mineral özellikte, asit dengesi yerinde,
-                                                    canlı, özgün ve yıllanabilir beyazlar ürettik.
+                                                   {!! $baglar->aciklama_uzum_alan2 !!}
 
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Cins özellikleri, bizim yapmak istediğimiz şaraba yatkınlıkları,
-                                                    toprağımıza ve bölgemize uyum gösterebilme özelliklerinden
-                                                    dolayı tanınan ve sevilen Sauvignon Blanc’ın yanı sıra Sauvignon
-                                                    Gris ve Pinot Gris üzümleriyle de çalışmayı tercih ettik. En
-                                                    eski üzüm cinslerinden olan ve çok değerli şarapların yapımında
-                                                    kullanılan Sauvignon Gris üzümünü, Türkiye’de ilk kez Arcadia
-                                                    Bağları’nda yetiştiriyoruz.
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Tokat bölgesi üzümlerinden Narince de, kökeniyle benzer özellik
-                                                    gösteren teruarımıza hızla adapte oldu ve beyazlarımız arasına
-                                                    katıldı.
-
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Kırmızılarda, Cabernet Franc’ın bölgedeki güçlü potansiyelini
-                                                    görünce 2011 rekoltesinde bu üzümden ilk monosepaj ürünümüzü
-                                                    çalıştık
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Dünya standartlarında yüksek kalitede şarap üretebilmenin gereği
-                                                    olan “yerinde üretim” tekniğini seçerek şaraphanemizi bağların
-                                                    tam ortasına kurduk.
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Arcadia’da üzümler güneşin ilk ışıklarıyla toplanarak doğrudan
-                                                    bağların ortasında yer alan şaraphanemize gidiyor ve hiç
-                                                    beklemeden işlemeye alınıyor. Bu, üzümün tadını koruması
-                                                    bakımından çok önemli. Şaraphanenin özel tasarımı sayesinde
-                                                    üzümler sadece yerçekimiyle, pompa ve benzeri mekanik yöntemler
-                                                    kullanılmadan işleniyor, şaraplar en saf haliyle bağında
-                                                    şişeleniyor.
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Bağlarımızı dikerken dengeli olgunlaşma kontrolü sağlayan Lyre
-                                                    Telli Terbiye Sistemini seçerek bu sistemi ülkemizde ilk kez
-                                                    uyguladık.
-                                                </p>
-                                                <p class="paragraph-detail">
-                                                    Bağlardan kadehe kadar uzanan süreçte modern olanakların
-                                                    getirdiği avantajları geleneksel yöntemlerle birlikte
-                                                    kullanıyor, iyi ile daha iyi arasındaki farkı yaratan küçük
-                                                    detaylara önem veriyoruz.
                                                 </p>
                                             </div>
                                             <div class="col-md-6 col-sm-12  d-flex justify-content-center">
                                                 <div class="col-6 pe-1">
-                                                    <img class="w-100 h-auto object-fit-contain"
-                                                         src="{{asset('assets/front/img/uzum-1.png')}}" alt="">
+                                                    @if($baglar->fotograf_uzum_2)
+                                                        <a data-fancybox="gallery" data-src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_2) }}">
+                                                            <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_2) }}"/>
+                                                        </a>
+                                                    @else
+                                                        <a data-fancybox="gallery" data-src="{{ asset('assets/front/img/uzum-1.png' ) }}">
+                                                            <img class="w-100 h-auto object-fit-contain" src="{{ asset('assets/front/img/uzum-1.png' )}}"/>
+                                                        </a>
+                                                    @endif
                                                 </div>
                                                 <div class="col-6">
-                                                    <img class="w-100 h-auto object-fit-contain"
-                                                         src="{{asset('assets/front/img/uzum-2.png')}}" alt="">
+                                                    @if($baglar->fotograf_uzum_3)
+                                                        <a data-fancybox="gallery" data-src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_3) }}">
+                                                            <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_3) }}"/>
+                                                        </a>
+                                                    @else
+                                                        <a data-fancybox="gallery" data-src="{{ asset('assets/front/img/uzum-2.png' ) }}">
+                                                            <img class="w-100 h-auto object-fit-contain" src="{{ asset('assets/front/img/uzum-2.png' )}}"/>
+                                                        </a>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -351,9 +241,9 @@
                                                     @foreach($galeri as $foto)
                                                         <div class="col-lg-4 col-md-6 col-sm-12 p-2">
                                                             <div class="galeri-foto">
-                                                                <img class="w-100 h-100 object-fit-contain"
-                                                                     src="{{asset("storage/foto-galeri/$foto->images")}}"
-                                                                     alt="{{$foto->aciklama}}">
+                                                                <a data-fancybox="gallery" data-src="{{asset("storage/foto-galeri/$foto->images")}}" data-caption="{{$foto->aciklama}}" >
+                                                                    <img class="w-100 h-auto object-fit-cover" src="{{asset("storage/foto-galeri/$foto->images")}}"/>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     @endforeach
@@ -372,10 +262,10 @@
                                     <div class="container mt-3">
                                         <div class="row mt-md-5">
                                             <div class="col-12 mt-lg-5">
-                                                <p class="title-homepage m-0">BAĞ HARİTAMIZ</p>
+                                                <p class="title-homepage m-0">{{$baglar->baslik_bag}}</p>
                                                 <p class="sub-title-homepage d-flex justify-content-start align-items-center">
                                                     <img src="{{asset('assets/front/img/line.svg')}}" alt="">
-                                                    <span>Bağlarda 4 Mevsim </span>
+                                                    <span>{{$baglar->alt_baslik_bag}}</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -385,8 +275,15 @@
                                             <div class="col-12">
                                                 <div>
                                                     <div>
-                                                        <img class="w-100 h-100 object-fit-contain"
-                                                             src="{{asset('assets/front/img/harita.png')}}" alt="">
+                                                        @if($baglar->fotograf_bag)
+                                                            <a data-fancybox="gallery" data-src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_bag) }}">
+                                                                <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_bag) }}"/>
+                                                            </a>
+                                                        @else
+                                                            <a data-fancybox="gallery" data-src="{{ asset('assets/front/img/harita.png' ) }}">
+                                                                <img class="w-100 h-auto object-fit-contain" src="{{ asset('assets/front/img/harita.png' )}}"/>
+                                                            </a>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>

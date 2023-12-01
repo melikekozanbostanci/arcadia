@@ -4,7 +4,6 @@
 @section('content')
     <!-- main-area -->
     <main>
-
         <section class="pt-5">
             <div class="container py-5">
                 <div class="row py-3">

@@ -20,7 +20,11 @@ class DatabaseSeeder extends Seeder
             Sayfa::class,
             Blog::class,
             Menu::class,
+            HikayemizSayfasi::class,
+            BasindanSeeder::class,
+            UrunlerSeeder::class,
             SiteAyarlari::class,
+            UrunKategorileriSeeder::class,
         ]);
     }
 }

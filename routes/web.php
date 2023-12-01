@@ -63,6 +63,22 @@ Route::prefix("admin")->middleware("isnotadmin")->group(function () {
     Route::delete('/arcadia-fauna-sil/{id}', 'App\Http\Controllers\Back\ArcadiaFaunaController@faunaSil')->name('admin.arcadia-fauna-sil');
     /* ARCADIA FAUNA */
 
+    /* BASINDAN */
+        Route::get('/basindan-sayfa-ayarlari', 'App\Http\Controllers\Back\Basindan@basindanSayfaAyarlari')->name('admin.basindan-sayfa-ayarlari');
+    /* BASINDAN */
+
+    /* HİKAYEMİZ */
+    Route::get('/hikayemiz-sayfa-ayarlari', 'App\Http\Controllers\Back\HikayemizController@hikayemizSayfaAyarlari')->name('admin.hikayemiz-sayfa-ayarlari');
+    /* HİKAYEMİZ */
+
+    /* ARCADIA BAĞLARI */
+    Route::get('/arcadia-baglari-sayfa-ayarlari', 'App\Http\Controllers\Back\ArcadiaBaglariController@arcadiaBaglariSayfaAyarlari')->name('admin.arcadia-baglari-sayfa-ayarlari');
+    /* ARCADIA BAĞLARI */
+
+    /* FELSEFEMİZ */
+    Route::get('/felsefemiz-sayfa-ayarlari', 'App\Http\Controllers\Back\Felsefemiz@felsefemizSayfaAyarlari')->name('admin.felsefemiz-sayfa-ayarlari');
+    /* FELSEFEMİZ */
+
     /* ÜRÜNLER */
     Route::get('/urunler', 'App\Http\Controllers\Back\Urun\Urunler@index')->name('admin.urunler');
     Route::get('/urun-ekle', 'App\Http\Controllers\Back\Urun\Urunler@urunEkle')->name('admin.urun-ekle');

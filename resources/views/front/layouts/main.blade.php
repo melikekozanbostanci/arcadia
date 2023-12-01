@@ -102,7 +102,18 @@
     });
 
 </script>
-
+<script>
+    $(document).ready(function () {
+        var brCount = 0;
+        $('br').each(function () {
+            brCount++;
+            if (brCount > 1) {
+                $(this).remove();
+                brCount = 0;
+            }
+        });
+    });
+</script>
 <script>
   $(document).ready(function () {
       var currentPageUrl = window.location.href;

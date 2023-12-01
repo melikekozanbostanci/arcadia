@@ -4,34 +4,30 @@
 @section('content')
     <!-- main-area -->
     <main>
-        <section>
-            <div class="container-fluid ">
-                <div class="row">
-                    <div class="col-12 position-relative">
-                        <div class="back-color">
-                            <img class="w-100 h-auto object-fit-contain opacity-50" src="{{ asset('assets/front/img/background.png') }}" alt="">
-                        </div>
+        <section class="col-12 position-relative">
+            <div >
+                <div class="back-color">
+                    <img class="img-fluid w-100 opacity-50" src="{{ asset('assets/front/img/background.png') }}" alt="">
+                </div>
 
-                        <div class="centered-text text-center">Doğanın Eşsiz Mirasını Şaraplarımıza Taşıyoruz</div>
-                        <div>
-                            <ul class="bg-down-text">
-                                <li>
-                                    <a href="{{ url('felsefemiz/surdurebilirlik-felsefemiz') }}">
-                                        Sürdürebilirlik
-                                    </a></li>
-                                <li>
-                                    <a href="{{ url('teruar-saraplari') }}">
-                                        Teruar Şaraplarımız
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('arcadia-baglari/uzumlerimiz') }}">
-                                        Üzümlerimiz
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="centered-text text-center">Doğanın Eşsiz Mirasını Şaraplarımıza Taşıyoruz</div>
+                <div>
+                    <ul class="bg-down-text">
+                        <li>
+                            <a href="{{ url('felsefemiz/surdurebilirlik-felsefemiz') }}">
+                                Sürdürebilirlik
+                            </a></li>
+                        <li>
+                            <a href="{{ url('teruar-saraplari') }}">
+                                Teruar Şaraplarımız
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('arcadia-baglari/uzumlerimiz') }}">
+                                Üzümlerimiz
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -67,18 +63,14 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 position-relative">
-                        <img class="w-100 h-auto object-fit-contain" src="{{ asset('assets/front/img/teruar-bg.png') }}" alt="">
-                        <div class="centered-text2 text-center">Geleneksel Yöntemlerle</div>
-                        <div class="centered-text text-center">Teruar Şarapları</div>
-                        <div class="my-5 position-absolute button-teruar">
-                            <button class="border-button ">
-                            </button>
-                        </div>
-                    </div>
+        <section class="position-relative">
+            <div>
+                <img class="img-fluid w-100" src="{{ asset('assets/front/img/teruar-bg.png') }}" alt="">
+                <div class="centered-text2 text-center">Geleneksel Yöntemlerle</div>
+                <div class="centered-text text-center">Teruar Şarapları</div>
+                <div class="my-5 position-absolute button-teruar">
+                    <button class="border-button ">
+                    </button>
                 </div>
             </div>
         </section>
@@ -139,13 +131,7 @@
             </div>
         </section>
         <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <img class="h-auto w-100 object-fit-contain" src="{{ asset('assets/front/img/degirmen.svg') }}" alt="">
-                    </div>
-                </div>
-            </div>
+            <img class="img-fluid w-100" src="{{ asset('assets/front/img/degirmen.svg') }}" alt="">
         </section>
         <section>
             <div class="container">
@@ -190,13 +176,7 @@
             </div>
         </section>
         <section>
-            <div class="container-fluid pt-5">
-                <div class="row">
-                    <div class="col-12">
-                        <img class="w-100" src="{{ asset('assets/front/img/video-image.png') }}" alt="">
-                    </div>
-                </div>
-            </div>
+            <img class="img-fluid w-100 pt-5" src="{{ asset('assets/front/img/video-image.png') }}" alt="">
         </section>
         <section>
             <div class="container pt-5">

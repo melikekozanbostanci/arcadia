@@ -43,14 +43,13 @@
         <script>
             Livewire.on('setDefaults', data => {
                 // Eğer data.images_alt_aciklama varsa, değeri atayın
+                document.getElementById('baslik').value = data.baslik;
+                document.getElementById('alt_baslik').value = data.alt_baslik;
+                document.getElementById('aciklama').value = data.aciklama;
                 if (isset(data.images_alt_aciklama)) {
                     document.getElementById('images_alt_aciklama').value = data.images_alt_aciklama;
                 }
 
-                // Eğer data.aciklama varsa, değeri atayın
-                if (isset(data.aciklama)) {
-                    document.getElementById('aciklama').value = data.aciklama;
-                }
             });
         </script>
     </div>

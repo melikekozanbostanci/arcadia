@@ -10,6 +10,10 @@ use App\Models\Front\ArcadiaFauna;
 use App\Models\Front\Bloglar;
 use App\Models\Front\Urun\Urunler;
 use App\Models\Front\Urun\UrunKategorileri;
+use App\Models\Front\Basindan;
+use App\Models\Front\Hikayemiz;
+use App\Models\Front\ArcadiaBaglari;
+use App\Models\Front\Felsefemiz;
 use App\Models\Front\SiteAyarlari;
 use Illuminate\Http\Request;
 
@@ -42,9 +46,10 @@ class SiteAyarlariController extends Controller
         $bloglar = Bloglar::all();
         $kategori = UrunKategorileri::all();
         $kategoriFirstId = UrunKategorileri::first()->id;
+        $baglar = ArcadiaBaglari::first();
         $urunler = Urunler::where('urunler_kategori_id', $kategoriFirstId)->get();
 
-        return view('front.arcadia-baglari', compact('siteAyar','slug','raporlar','galeri','bloglar','kategori','urunler'));
+        return view('front.arcadia-baglari', compact('siteAyar','slug','raporlar','galeri','bloglar','kategori','urunler','baglar'));
     }
     public function arcadiadanhaberler($slug)
     {
@@ -61,6 +66,7 @@ class SiteAyarlariController extends Controller
         $galeri = FotoGaleri::all();
         $bloglar = Bloglar::all();
         $kategori = UrunKategorileri::all();
+        $baglar = ArcadiaBaglari::all();
         $urunler = Urunler::where('urunler_kategori_id', $slug)->get();
         return view('front.arcadia-baglari', compact('siteAyar','slug','urunler','raporlar','galeri','bloglar','kategori'));
     }
@@ -74,7 +80,8 @@ class SiteAyarlariController extends Controller
     public function basindan()
     {
         $siteAyar = $this->siteAyar;
-        return view('front.basindan', compact('siteAyar'));
+        $basindan = Basindan::first();
+        return view('front.basindan', compact('siteAyar', 'basindan'));
     }
     public function teruarsaraplari()
     {
@@ -84,13 +91,15 @@ class SiteAyarlariController extends Controller
     public function hikayemiz($slug)
     {
         $siteAyar = $this->siteAyar;
-        return view('front.hikayemiz', compact('siteAyar', 'slug'));
+        $hikayemiz = Hikayemiz::first();
+        return view('front.hikayemiz', compact('siteAyar', 'slug', 'hikayemiz'));
     }
     public function felsefemiz($slug)
     {
         $siteAyar = $this->siteAyar;
         $fauna = ArcadiaFauna::all();
-        return view('front.felsefemiz', compact('siteAyar', 'slug', 'fauna'));
+        $felsefemiz = Felsefemiz::first();
+        return view('front.felsefemiz', compact('siteAyar', 'slug', 'fauna', 'felsefemiz'));
     }
     public function bakucha()
     {

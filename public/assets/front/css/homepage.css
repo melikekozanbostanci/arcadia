@@ -29,7 +29,13 @@ main{
     min-height: 70vh;
     height: 100%;
 }
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+.object-fit-cover{
+    object-fit: cover;
+}
+.object-fit-contain{
+    object-fit: contain;
+}
+.container-fluid {
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
@@ -37,6 +43,9 @@ main{
     background-color: #FFFFFF !important; /* Arkaplan rengi beyaz */
     color: #000000 !important; /* Metin rengi siyah */
     box-shadow: 0px 1px rgba(0, 0, 0, 0.1);
+}
+.letter-space{
+    letter-spacing: 0.1rem;
 }
 
 header{
@@ -87,7 +96,7 @@ header{
      box-shadow: none !important;
  }
  .ko-img img{
-     max-height: 350px;
+     max-height: 400px;
  }
  .baslik-foto{
      min-height: 300px;
@@ -128,13 +137,6 @@ header{
     white-space: nowrap;
     font-size:2.25rem ;
     font-family: "Ibarra Real Nova MediumItalic";
-}
-
-@media (max-width: 1200px) {
-    .centered-text {
-        font-size: 4.188rem;
-
-    }
 }
 
 @media (max-width: 991px) {
@@ -179,6 +181,15 @@ header{
     font-family: "Barlow Condensed";
     font-size: 3.75rem;
     text-transform: uppercase;
+}
+@media (max-width: 1200px) {
+    .centered-text {
+        font-size: 3.188rem;
+
+    }
+    .title-homepage {
+        font-size: 2.75rem;
+    }
 }
 .sub-title-homepage{
     font-family: "Pacifico" !important;
@@ -448,19 +459,50 @@ footer{
 }
 .arc-abs{
     position: absolute;
-    top: 4%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-}.arc-abs2{
+    top: -4%;
+    right: 10%;
+}
+.arc-abs2{
      position: absolute;
-     top: -449%;
      left: 0%;
+    padding: 3rem;
+    bottom: -329%;
 }
 @media (max-width: 991px) and (min-width: 768px) {
     .arcadia {
         font-size: 3.5rem !important;
         text-transform: uppercase;
         transform: translateY(7%);
+    }
+    .arc-abs{
+        position: relative;
+        top: 0%;
+        right: 12%;
+        padding-bottom: 1rem;
+    }
+}
+@media (max-width: 1400px) and (min-width: 1201px) {
+    .centered-text{
+        font-size: 4.5rem;
+    }
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+    .arc-abs{
+        top: 2%;
+    }
+    .arc-abs2{
+        position: absolute;
+        left: 0%;
+        padding: 2rem;
+        bottom: -245%;
+    }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+    .arc-abs2{
+        position: absolute;
+        left: 0%;
+        padding: 0rem;
+        bottom: -150%;
     }
 }
 
@@ -735,15 +777,6 @@ footer{
 @media screen and (min-width: 768px) and (max-width:896px){
     .ko-img{
         padding-bottom: 1rem;
-    }
-    .arc-abs {
-        top: -2%;
-        text-align: center;
-        left: 0;
-        transform: translate(0%, 0);
-    }
-    .arc-abs2 {
-        top: -300%;
     }
 }
 @media screen and (max-width: 768px) and (min-width:577px){

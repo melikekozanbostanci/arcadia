@@ -34,27 +34,6 @@ class ArcadiaFaunaDuzenle extends Component
         $this->images_temp = $this->fauna->images;
     }
 
-/*    public function kaydet()
-    {
-        if ($this->images) {
-            $images_temp = md5($this->images->getClientOriginalName() . microtime()) . '.' . $this->images->extension();
-
-            Storage::putFileAs('public/arcadia-fauna', $this->images, $images_temp);
-
-            $fauna = ArcadiaFauna::find($this->fauna->id);
-            $fauna->images = $images_temp;
-            $fauna->images_alt_aciklama = $this->images_alt_aciklama;
-            $fauna->aciklama = $this->aciklama;
-            $fauna->save();
-
-            // Geçici dosyayı sıfırla
-            $this->images_temp = null;
-
-            $this->dispatch('success', ['title' => 'Başarılı', 'message' => 'Arcadia Fauna içerik başarıyla düzenlendi.']);
-            return $this->redirect(route("admin.arcadia-fauna"), navigate: true);
-
-        }
-    }*/
     public function kaydet()
     {
         if ($this->aciklama || $this->images || $this->images_alt_aciklama) {

@@ -151,6 +151,30 @@
                         <span class="hide-menu">Arcadia Fauna</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link @if(request()->is("admin/basindan")) @endif" href="{{route("admin.basindan-sayfa-ayarlari")}}" aria-expanded="false">
+                        <span><i class="ti ti-news"></i></span>
+                        <span class="hide-menu">Basından Sayfa Ayarları</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link @if(request()->is("admin/hikayemiz")) @endif" href="{{route("admin.hikayemiz-sayfa-ayarlari")}}" aria-expanded="false">
+                        <span><i class="ti ti-news"></i></span>
+                        <span class="hide-menu">Hikayemiz Sayfa Ayarları</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link @if(request()->is("admin/arcadia-baglari")) @endif" href="{{route("admin.arcadia-baglari-sayfa-ayarlari")}}" aria-expanded="false">
+                        <span><i class="ti ti-news"></i></span>
+                        <span class="hide-menu">Arcadia Bağları Sayfa Ayarları</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link @if(request()->is("admin/felsefemiz")) @endif" href="{{route("admin.felsefemiz-sayfa-ayarlari")}}" aria-expanded="false">
+                        <span><i class="ti ti-news"></i></span>
+                        <span class="hide-menu">Felsefemiz Sayfa Ayarları</span>
+                    </a>
+                </li>
 {{--                <li class="sidebar-item">--}}
 {{--                    <a class="sidebar-link has-arrow" href="#" aria-expanded="false">--}}
 {{--                        <span class="d-flex">--}}
