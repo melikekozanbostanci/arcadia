@@ -24,9 +24,8 @@
                             Lüks kavramının gerçek ve lezzetli gıda, doğayla iç içe ve israftan uzak bir tatil deneyimi olarak yeniden tanımlandığı günümüzde, Bakucha Vineyard tüm bunları doğallık, sadelik ve zarafet ile harmanlayan bir bakış ile sunarak, doğayla bütünleşik otel anlayışını tüm kıstaslarıyla karşılayan özgün bir alan yaratıyor.
                         </p>
                         <div class="d-flex justify-content-end">
-                            <a target="_blank" href="https://bakucha.com/">
-                                <button class="bakucha-button ">
-                                </button>
+                            <a target="_blank" class="btn btn-outline-secondary btn-arcadia" href="https://bakucha.com/">
+                                WEB SİTESİNİ ZİYARET ET
                             </a>
 
                         </div>

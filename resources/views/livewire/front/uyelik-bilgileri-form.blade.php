@@ -135,7 +135,7 @@
             @endif
             <div class="col-md-12 d-flex align-items-end justify-content-end mt-3">
                 <div class=" d-flex justify-content-end">
-                    <button type="submit" class="giris-button">
+                    <button type="submit" class="btn btn-outline-secondary btn-arcadia">KAYDET</button>
                     </button>
                 </div>
             </div>

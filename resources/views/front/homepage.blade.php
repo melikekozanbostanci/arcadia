@@ -7,10 +7,14 @@
         <section class="col-12 position-relative">
             <div >
                 <div class="back-color">
+                    @if($siteAyar->fotograf_ana)
+                        <img class="img-fluid w-100 opacity-50" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_ana) }}" alt="">
+                    @else
                     <img class="img-fluid w-100 opacity-50" src="{{ asset('assets/front/img/background.png') }}" alt="">
+                    @endif
                 </div>
 
-                <div class="centered-text text-center">Doğanın Eşsiz Mirasını Şaraplarımıza Taşıyoruz</div>
+                <div class="centered-text text-center">{{$siteAyar->fotograf_ana_baslik}}</div>
                 <div>
                     <ul class="bg-down-text">
                         <li>
@@ -36,27 +40,18 @@
             <div class="container mt-3">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-6 col-md-12 col-sm-12 mt-md-5">
-                        <p class="title-homepage m-0">SÜRDÜREBİLİRLİK FELSEFEMİZ</p>
+                        <p class="title-homepage m-0">{{$siteAyar->baslik_1}}</p>
                         <p class="sub-title-homepage d-flex justify-content-start align-items-center">
                             <img src="{{asset('assets/front/img/line.svg')}}" alt="">
-                            <span>Arcadia Bağları </span>
+                            <span>{{$siteAyar->alt_baslik_1}} </span>
                         </p>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 mt-md-5">
                         <p class="paragraph-detail">
-                            Arcadia Şarapları’nın en büyük özelliği minimum manipülasyonla yapılmış yaşayan şaraplar
-                            olmaları. Bağda üzümlerin yetiştirilmesinde gösterilen özen, her bir salkımın ayrı ayrı elle
-                            toplanması ile devam ediyor. Üzümün kendi lezzetini kaybetmemesi için, işlemeye girene kadar
-                            hiçbir şekilde yırtılmaması, şıranın akmaması ve kabuğunun zarar görmemesi çok önemli.
-                        </p>
-                        <p class="paragraph-detail">
-                            Bu yüzden Arcadia Bağları’nın hasadı bıçakla değil makasla yapılıyor. Üzümler birbirinin
-                            ağırlığıyla ezilip suları akmasın diye delikli küçük sepetlerle taşınıyor. Üretim süreciyle
-                            ilgili bu detaylar şarabın doğallığını ve kalitesini belirleyen önemli etkenler.
+                           {!! $siteAyar->aciklama_1 !!}
                         </p>
                         <div class="my-4 p-1">
-                            <button class="border-button ">
-                            </button>
+                            <a href="/felsefemiz/surdurebilirlik-felsefemiz" type="button" class="btn btn-outline-secondary btn-arcadia">İNCELE</a>
                         </div>
 
                     </div>
@@ -65,13 +60,22 @@
         </section>
         <section class="position-relative">
             <div>
-                <img class="img-fluid w-100" src="{{ asset('assets/front/img/teruar-bg.png') }}" alt="">
-                <div class="centered-text2 text-center">Geleneksel Yöntemlerle</div>
-                <div class="centered-text text-center">Teruar Şarapları</div>
+                @if($siteAyar->fotograf1)
+                    <a data-fancybox="gallery" data-src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_1) }}">
+                        <img class="img-fluid w-100" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_1) }}"/>
+                    </a>
+                @else
+                    <a data-fancybox="gallery" data-src="{{ asset('assets/front/img/teruar-bg.png') }}">
+                        <img class="img-fluid w-100" src="{{ asset('assets/front/img/teruar-bg.png') }}"/>
+                    </a>
+                @endif
+
+                <div class="centered-text2 text-center">{{$siteAyar->fotograf_yazi_1}}</div>
+                <div class="centered-text text-center">{{$siteAyar->fotograf_yazi_2}}</div>
                 <div class="my-5 position-absolute button-teruar">
-                    <button class="border-button ">
-                    </button>
+                    <a href="/teruar-saraplari" type="button" class="btn btn-outline-light">İNCELE</a>
                 </div>
+
             </div>
         </section>
 
@@ -87,11 +91,11 @@
                     <div class="container">
                         <div class="row pt-md-5 pt-sm-3">
                             <div class="col-12 d-flex justify-content-center grape">
-                                ÜZÜMLERİMİZ
+                                {{$siteAyar->baslik_2}}
                             </div>
                             <div class="col-12 d-flex align-items-center justify-content-center">
                                 <span> <img class="h-auto w-100 object-fit-contain" src="{{ asset('assets/front/img/line2.svg') }}" alt=""> </span>
-                                <span class="pacifico-span px-2">9 farklı cins üzüm</span>
+                                <span class="pacifico-span px-2">{{$siteAyar->alt_baslik_2}}</span>
                                 <span><img class="h-auto w-100 object-fit-contain" src="{{ asset('assets/front/img/line2.svg') }}" alt="" > </span>
                             </div>
                         </div>
@@ -100,12 +104,7 @@
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="col-md-4 col-sm-5">
                                     <ul class="left-text">
-                                        <li>CABERNET SAUVIGNON</li>
-                                        <li>CABERNET FRANC</li>
-                                        <li>MERLOT</li>
-                                        <li>SANGIOVESE</li>
-                                        <li>ÖKÜZGÖZÜ </li>
-                                        <li>PAPASKARASI</li>
+                                        {!! $siteAyar->aciklama_2_1 !!}
                                     </ul>
                                 </div>
                                 <div class="col-md-4 col-sm-2 grapeImage">
@@ -113,10 +112,7 @@
                                 </div>
                                 <div class="col-md-4 col-sm-5">
                                     <ul class="right-text">
-                                        <li>SAUVIGNON BLANC </li>
-                                        <li>SAUVIGNON GRIS</li>
-                                        <li>PINOT GRIS</li>
-                                        <li>NARİNCE</li>
+                                        {!! $siteAyar->aciklama_2_2 !!}
                                     </ul>
                                 </div>
                             </div>
@@ -131,7 +127,15 @@
             </div>
         </section>
         <section>
-            <img class="img-fluid w-100" src="{{ asset('assets/front/img/degirmen.svg') }}" alt="">
+            @if($siteAyar->fotograf_2)
+                <a data-fancybox="gallery" data-src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_2) }}">
+                    <img class="img-fluid w-100" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_2) }}"/>
+                </a>
+            @else
+                <a data-fancybox="gallery" data-src="{{ asset('assets/front/img/degirmen.svg') }}">
+                    <img class="img-fluid w-100" src="{{ asset('assets/front/img/degirmen.svg') }}"/>
+                </a>
+            @endif
         </section>
         <section>
             <div class="container">
@@ -175,32 +179,52 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="position-relative">
+            @if($siteAyar->fotograf_3)
+                <img class="img-fluid w-100" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_3) }}" alt="">
+            @else
             <img class="img-fluid w-100 pt-5" src="{{ asset('assets/front/img/video-image.png') }}" alt="">
+            @endif
+
+            <div class="position-absolute top-50 left-50">
+                <i class="fa-regular fa-circle-play play-icon btn"></i>
+            </div>
         </section>
         <section>
             <div class="container pt-5">
                 <div class="row d-flex align-items-center justify-content-around">
                     <div class="col-md-6 col-sm-12">
-                        <img class="w-100 h-100" src="{{asset('assets/front/img/otel.png')}}" alt="">
+                        @if($siteAyar->fotograf_4)
+                            <a data-fancybox="gallery" data-src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_4) }}">
+                                <img class="w-100 h-100" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_4) }}"/>
+                            </a>
+                        @else
+                            <a data-fancybox="gallery" data-src="{{ asset('assets/front/img/otel.png') }}">
+                                <img class="w-100 h-100" src="{{ asset('assets/front/img/otel.png') }}"/>
+                            </a>
+                        @endif
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <p class="title-homepage ">BAKUCHA VINEYARD HOTEL</p>
+                        <p class="title-homepage ">{{$siteAyar->baslik_3}}</p>
                         <p class="sub-title-homepage d-flex justify-content-start align-items-center m-0">
                             <img src="{{asset('assets/front/img/line.svg')}}" alt="">
-                            <span>Doğanın Ortasında </span>
+                            <span>{{$siteAyar->alt_baslik_3}} </span>
                         </p>
                         <div class="mt-3">
                             <p class="paragraph-detail">
-                                Lüks kavramının gerçek ve lezzetli gıda, doğayla iç içe ve israftan uzak bir tatil
-                                deneyimi olarak yeniden tanımlandığı günümüzde, Bakucha Vineyard tüm bunları doğallık,
-                                sadelik ve zarafet ile harmanlayan bir bakış ile sunarak, doğayla bütünleşik otel
-                                anlayışını tüm kıstaslarıyla karşılayan özgün bir alan yaratıyor.
+                                {!! $siteAyar->aciklama_3 !!}
                             </p>
-                            <img class="py-3 w-50 h-auto object-fit-contain" src="{{asset('assets/front/img/otel-logo.png')}}" alt="">
+                            @if($siteAyar->fotograf_5)
+                                <a data-fancybox="gallery" data-src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_5) }}">
+                                    <img class="py-3 w-50 h-auto object-fit-contain" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_5) }}"/>
+                                </a>
+                            @else
+                                <a data-fancybox="gallery" data-src="{{asset('assets/front/img/otel-logo.png') }}">
+                                    <img class="py-3 w-50 h-auto object-fit-contain" src="{{ asset('assets/front/img/otel-logo.png') }}"/>
+                                </a>
+                            @endif
                             <div class="py-3">
-                                <button class="kesfet-button ">
-                                </button>
+                                <a href="/bakuchavineyard" type="button" class="btn btn-outline-secondary btn-arcadia">Keşfet</a>
                             </div>
 
                         </div>
@@ -212,8 +236,26 @@
         <section>
             <div class="container pt-5">
                 <div class="row">
-                    <div class="col-12">
-                        <img class="w-100 h-auto object-fit-contain" src="{{asset('assets/front/img/group-image.png')}}" alt="">
+                    <div class="col-lg-4 col-12 p-2">
+                        @if($siteAyar->fotograf_6)
+                            <a data-fancybox="gallery" data-src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_6) }}">
+                                <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_6) }}"/>
+                            </a>
+                        @endif
+                    </div>
+                    <div class="col-lg-4 col-12 p-2">
+                        @if($siteAyar->fotograf_7)
+                            <a data-fancybox="gallery" data-src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_7) }}">
+                                <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_7) }}"/>
+                            </a>
+                        @endif
+                    </div>
+                    <div class="col-lg-4 col-12 p-2">
+                        @if($siteAyar->fotograf_8)
+                            <a data-fancybox="gallery" data-src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_8) }}">
+                                <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_8) }}"/>
+                            </a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -269,8 +311,7 @@
                             </div>
                             @csrf
                             <div class="py-3 d-flex justify-content-end">
-                                <button type="submit" class="gonder-button ">
-                                </button>
+                                <button type="submit" class="btn btn-outline-secondary btn-arcadia">Gönder</button>
                             </div>
                         </form>
                     </div>

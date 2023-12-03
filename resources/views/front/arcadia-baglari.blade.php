@@ -515,7 +515,9 @@
 
                                                     <div class="w-75"
                                                          x-show="selectedVersion === 'v1' || selectedVersion === 'v2'">
-                                                        <a href="">Geri Git</a>
+                                                        <div class="my-2">
+                                                            <a href="" class="btn btn-outline-secondary btn-arcadia">Geri Git</a>
+                                                        </div>
                                                         <!-- v1 veya v2 Form Content -->
                                                         <div class="row needs-validation"
                                                              x-show="selectedVersion === 'v1' || selectedVersion === 'v2'">
@@ -542,7 +544,7 @@
                                                                     </div>
                                                                     @csrf
                                                                     <div class=" d-flex justify-content-end">
-                                                                        <button type="submit" class="giris-button">
+                                                                        <button type="submit" class="btn btn-outline-secondary btn-arcadia">GİRİŞ</button>
                                                                         </button>
                                                                     </div>
                                                                 </form>

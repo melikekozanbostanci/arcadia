@@ -62,7 +62,7 @@
                            </div>
                            @csrf
                            <div class="py-3 d-flex justify-content-end">
-                               <button type="submit" class="gonder-button ">
+                               <button type="submit" class="btn btn-outline-secondary btn-arcadia">GÖNDER</button>
                                </button>
                            </div>
                        </form>
@@ -90,7 +90,7 @@
                                 <div>ik@arcadiavineyards.com </div>
                             </div>
                             <div class="col-4">
-                                <a href="mailto:ik@arcadiavineyards.com"><img class="w-100 h-auto" src="{{ asset('assets/front/img/button-basvur.svg') }}" alt=""></a>
+                                <a href="mailto:ik@arcadiavineyards.com"  class="btn btn-outline-secondary btn-arcadia"> BAŞVUR</a>
                             </div>
                         </div>
                     </div>

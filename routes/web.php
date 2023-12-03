@@ -79,6 +79,10 @@ Route::prefix("admin")->middleware("isnotadmin")->group(function () {
     Route::get('/felsefemiz-sayfa-ayarlari', 'App\Http\Controllers\Back\Felsefemiz@felsefemizSayfaAyarlari')->name('admin.felsefemiz-sayfa-ayarlari');
     /* FELSEFEMİZ */
 
+    /* OTEL */
+    Route::get('/otel-sayfa-ayarlari', 'App\Http\Controllers\Back\OtelController\otelSayfaAyarlari')->name('admin.otel-sayfa-ayarlari');
+    /* OTEL */
+
     /* ÜRÜNLER */
     Route::get('/urunler', 'App\Http\Controllers\Back\Urun\Urunler@index')->name('admin.urunler');
     Route::get('/urun-ekle', 'App\Http\Controllers\Back\Urun\Urunler@urunEkle')->name('admin.urun-ekle');
