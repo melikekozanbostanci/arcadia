@@ -69,8 +69,34 @@ header{
     width: 100%;
     background-color: #FAF9F4;
 }
-img{
-    max-height: 600px;
+.arc-test{
+    background-image: url(../img/bos-buton.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    color: #fff;
+    padding: 0.9rem 4.5rem;
+    height: auto;
+    background-color: transparent;
+}
+.arc-test:hover{
+    color: #fff !important;
+    border-color: #fff !important;
+    background-color: #71707069;;
+}
+.arc-test-beyaz{
+    background-image: url(../img/bos-beyaz-buton.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    color: #fff;
+    height: auto;
+    background-color: transparent;
+}
+.arc-test-beyaz:hover{
+    color: #fff !important;
+    border-color: #fff !important;
+    background-color: #71707069;;
 }
 .canvas-max{
     font-size: 3.125rem;
@@ -146,9 +172,14 @@ img{
 .left-50{
     left: 50%;
 }
+.ply{
+    left: 50%;
+    top: 50%;
+}
 .play-icon{
     font-size: 4em;
     color: white;
+
 }
 
 @media (max-width: 991px) {
@@ -272,10 +303,15 @@ img{
     top: 53%;
     left: 43%;
 }
+.max-450{
+    height: auto;
+    max-height: 325px;
+    min-height: 325px;
+    object-fit: cover;
+}
 .button-teruar a{
     padding: .7rem 4rem;
     font-size: 1.2rem;
-    border-width: 1px;
 }
 .btn-arcadia{
     padding: .5rem 3.4rem;
@@ -543,15 +579,16 @@ footer{
     background-size: contain;
     background-repeat: no-repeat;
     border: none;
-    padding: 2.063rem 7.75rem;
+    padding: 2.063rem 6.5rem;
     background-color: transparent;
 }
+
 .sarap-v2-button{
     background-image: url("../img/button-nihaituketicidegil.svg");
     background-size: contain;
     background-repeat: no-repeat;
     border: none;
-    padding: 2.063rem 7.75rem;
+    padding: 2.063rem 6.5rem;
     background-color: transparent;
 }
 .hikaye-absolute{
@@ -593,7 +630,7 @@ footer{
     box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.2);
 }
 .timeline .swiper-container {
-    height: 600px;
+    height: 700px;
     width: 100vw;
     position: relative;
 }
@@ -732,7 +769,12 @@ footer{
 .blog-image img{
     object-fit: cover;
 }
-
+.sarap-v1-button:hover{
+    background-color: #71707069;
+}
+.sarap-v2-button:hover{
+    background-color: #71707069;
+}
 
 @media screen and (min-width: 768px) {
     .timeline .swiper-slide::after {
@@ -791,10 +833,32 @@ footer{
     .timeline .swiper-slide-content {
         left: 25%;
     }
+    .button-teruar {
+        top: 50%;
+        left: 43%;
+    }
+    .arc-test-beyaz {
+        padding: 0.1rem 1rem;
+    }
+    .button-teruar a {
+        padding: 0.4rem 2.2rem;
+    }
 }
 @media screen and (min-width: 768px) and (max-width:896px){
     .ko-img{
         padding-bottom: 1rem;
+    }
+    .button-teruar {
+        top: 48%;
+        left: 40%;
+    }
+    .button-teruar a {
+        padding: 0.4rem 2.6rem;
+        font-size: 1rem;
+    }
+    .ply {
+        left: 40%;
+        top: 40%;
     }
 }
 @media screen and (max-width: 768px) and (min-width:577px){
@@ -843,6 +907,7 @@ footer{
         padding: 1.3rem 3.75rem;
         width: 55%;
     }
+
     .button-teruar {
         top: 46%;
         left: 41%;
@@ -1000,6 +1065,9 @@ footer{
     }
 }
 @media screen and (max-width: 320px) {
+    .back-color img {
+        min-height: 271px;
+    }
     .bg-down-text li {
         font-size: 1rem;
     }
@@ -1035,19 +1103,30 @@ footer{
         font-size: 1rem;
         width: inherit;
     }
-    .button-teruar button {
-        padding: 1rem 2.5rem;
-        width: 14%;
+    .button-teruar a {
+        padding: 0.3rem 0.7rem;
+        font-size: .7rem;
+        border-width: 1px;
     }
     .button-teruar {
-        top: 29%;
-        left: 37%;
+        top: 27%;
+        left: 41%;
+    }
+    .ply{
+        left: 39%;
+        top: 35%;
+    }
+    .play-icon {
+        font-size: 2em;
+        color: white;
+
     }
     .centered-text2 {
         top: 29%;
         left: 50%;
         font-size: 1.2rem;
     }
+
     .grape {
         font-size: 1.75rem;
     }

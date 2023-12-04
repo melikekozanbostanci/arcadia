@@ -97,9 +97,9 @@
                                                         {{$baglar->baslik_arcadia_alan2_1}}
                                                     </p>
                                                 </div>
-                                                <div class="col-lg-6 col-sm-12 arc-abs d-flex justify-content-end">
+                                                <div class="col-lg-6 col-sm-12 arc-abs d-flex justify-content-center">
                                                     @if($baglar->fotograf_arcadia_1)
-                                                        <img class="w-75 img-fluid"
+                                                        <img class="w-50 img-fluid"
                                                              src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_1) }}" alt="">
                                                         @else
                                                         <img class="w-75 img-fluid"
@@ -179,13 +179,12 @@
                                     </div>
                                 </section>
                                 <section class="pb-md-5 position-relative">
-                                    <img class="img-fluid " src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_1) }}" alt="">
-                                    <div class="position-absolute text-center top-0 text-white fs-4 w-100 letter-space pt-3">
-                                        <div class="d-flex justify-content-center flex-column">
-                                            <p>{!! $baglar->fotograf_uzum_1_aciklama !!}</p>
-                                            <p>{!! $baglar->fotograf_uzum_1_aciklama2 !!}</p>
-                                        </div>
+                                    <img class="img-fluid w-100" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_1) }}" alt="">
+                                    <div class="position-absolute d-flex justify-content-center align-items-center flex-column top-0 text-white fs-2 w-100 h-100 letter-space pt-3">
+                                        <p>{!! $baglar->fotograf_uzum_1_aciklama !!}</p>
+                                        <p>{!! $baglar->fotograf_uzum_1_aciklama2 !!}</p>
                                     </div>
+
                                 </section>
                                 <section>
                                     <div class="container py-5">
@@ -242,7 +241,7 @@
                                                         <div class="col-lg-4 col-md-6 col-sm-12 p-2">
                                                             <div class="galeri-foto">
                                                                 <a data-fancybox="gallery" data-src="{{asset("storage/foto-galeri/$foto->images")}}" data-caption="{{$foto->aciklama}}" >
-                                                                    <img class="w-100 h-auto object-fit-cover" src="{{asset("storage/foto-galeri/$foto->images")}}"/>
+                                                                    <img class="w-100 max-450" src="{{asset("storage/foto-galeri/$foto->images")}}"/>
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -498,25 +497,35 @@
                                                 </div>
                                                 <div x-data="{ selectedVersion: null, showButtons: true }"
                                                      class="col-md-12 col-sm-12  pt-5 d-flex justify-content-center align-items-center">
-                                                    <div class="py-3" x-show="showButtons">
-                                                        <a href="#"
-                                                           x-on:click="selectedVersion = 'v1'; showButtons = false;">
-                                                            <button x-show="selectedVersion !== 'v1'"
-                                                                    class="sarap-v1-button"></button>
-                                                        </a>
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="py-3 me-2" x-show="showButtons">
+                                                                <a href="#"
+                                                                   x-on:click="selectedVersion = 'v1'; showButtons = false;">
+                                                                    <button x-show="selectedVersion !== 'v1'"
+                                                                            class="sarap-v1-button"></button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="py-3" x-show="showButtons">
+                                                                <a href="#"
+                                                                   x-on:click="selectedVersion = 'v2'; showButtons = false;">
+                                                                    <button x-show="selectedVersion !== 'v2'"
+                                                                            class="sarap-v2-button"></button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="py-3" x-show="showButtons">
-                                                        <a href="#"
-                                                           x-on:click="selectedVersion = 'v2'; showButtons = false;">
-                                                            <button x-show="selectedVersion !== 'v2'"
-                                                                    class="sarap-v2-button"></button>
-                                                        </a>
-                                                    </div>
+
+
 
                                                     <div class="w-75"
                                                          x-show="selectedVersion === 'v1' || selectedVersion === 'v2'">
-                                                        <div class="my-2">
-                                                            <a href="" class="btn btn-outline-secondary btn-arcadia">Geri Git</a>
+                                                        <div class="my-3">
+                                                            <div class="arc-test btn">
+                                                                <a href="" class="btn">Geri Dön</a>
+                                                            </div>
                                                         </div>
                                                         <!-- v1 veya v2 Form Content -->
                                                         <div class="row needs-validation"
@@ -544,7 +553,9 @@
                                                                     </div>
                                                                     @csrf
                                                                     <div class=" d-flex justify-content-end">
-                                                                        <button type="submit" class="btn btn-outline-secondary btn-arcadia">GİRİŞ</button>
+                                                                        <div class="arc-test btn">
+                                                                            <a type="submit" class="btn">GİRİŞ</a>
+                                                                        </div>
                                                                         </button>
                                                                     </div>
                                                                 </form>

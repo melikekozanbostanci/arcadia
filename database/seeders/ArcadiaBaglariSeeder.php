@@ -61,6 +61,8 @@ Bağlardan kadehe kadar uzanan süreçte modern olanakların getirdiği avantajl
                 'baslik_bag' => 'BAĞ HARİTAMIZ',
                 'alt_baslik_bag' => ' Bağlarda 4 Mevsim',
                 'fotograf_bag' => '',
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ];
 

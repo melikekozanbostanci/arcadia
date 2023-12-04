@@ -50,8 +50,11 @@
                         <p class="paragraph-detail">
                            {!! $siteAyar->aciklama_1 !!}
                         </p>
-                        <div class="my-4 p-1">
-                            <a href="/felsefemiz/surdurebilirlik-felsefemiz" type="button" class="btn btn-outline-secondary btn-arcadia">İNCELE</a>
+                        <div class="my-4">
+                            <div class="arc-test btn">
+                                <a href="/felsefemiz/surdurebilirlik-felsefemiz" type="button" class="btn">İNCELE</a>
+                            </div>
+
                         </div>
 
                     </div>
@@ -73,7 +76,9 @@
                 <div class="centered-text2 text-center">{{$siteAyar->fotograf_yazi_1}}</div>
                 <div class="centered-text text-center">{{$siteAyar->fotograf_yazi_2}}</div>
                 <div class="my-5 position-absolute button-teruar">
-                    <a href="/teruar-saraplari" type="button" class="btn btn-outline-light">İNCELE</a>
+                    <div class="arc-test-beyaz btn">
+                        <a href="/teruar-saraplari" type="button" class="btn text-white">İNCELE</a>
+                    </div>
                 </div>
 
             </div>
@@ -186,7 +191,7 @@
             <img class="img-fluid w-100 pt-5" src="{{ asset('assets/front/img/video-image.png') }}" alt="">
             @endif
 
-            <div class="position-absolute top-50 left-50">
+            <div class="position-absolute ply">
                 <i class="fa-regular fa-circle-play play-icon btn"></i>
             </div>
         </section>
@@ -224,7 +229,9 @@
                                 </a>
                             @endif
                             <div class="py-3">
-                                <a href="/bakuchavineyard" type="button" class="btn btn-outline-secondary btn-arcadia">Keşfet</a>
+                                <div class="arc-test btn">
+                                    <a href="/bakuchavineyard" type="button" class="btn">KEŞFET</a>
+                                </div>
                             </div>
 
                         </div>
@@ -311,7 +318,9 @@
                             </div>
                             @csrf
                             <div class="py-3 d-flex justify-content-end">
-                                <button type="submit" class="btn btn-outline-secondary btn-arcadia">Gönder</button>
+                                <div class="arc-test btn">
+                                    <a type="submit" class="btn">GÖNDER</a>
+                                </div>
                             </div>
                         </form>
                     </div>

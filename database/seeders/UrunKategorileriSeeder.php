@@ -16,15 +16,21 @@ class UrunKategorileriSeeder extends Seeder
         $kategori = [
             [
                 'id' => 1,
-                'kategori_adi' => 'A Serisi'
+                'kategori_adi' => 'A Serisi',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'id' => 2,
-                'kategori_adi' => 'Mono Serisi'
+                'kategori_adi' => 'Mono Serisi',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'id' => 3,
-                'kategori_adi' => 'Koleksiyon Serisi'
+                'kategori_adi' => 'Koleksiyon Serisi',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ];
 

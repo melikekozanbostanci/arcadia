@@ -19,7 +19,9 @@ class UrunlerSeeder extends Seeder
             'urun_adi' => 'Blend A',
             'baslik' => 'ARCADIA - İlktepe - Sangiovese Merlot',
             'aciklama' => 'ARCADIA - İlktepe - Sangiovese Merlot Açıklama',
-            'urunler_kategori_id' => 1
+            'urunler_kategori_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ];
 

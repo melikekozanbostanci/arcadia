@@ -62,8 +62,9 @@
                            </div>
                            @csrf
                            <div class="py-3 d-flex justify-content-end">
-                               <button type="submit" class="btn btn-outline-secondary btn-arcadia">GÖNDER</button>
-                               </button>
+                               <div class="arc-test btn">
+                                   <a type="submit" class="btn">GÖNDER</a>
+                               </div>
                            </div>
                        </form>
                    </div>
@@ -90,7 +91,9 @@
                                 <div>ik@arcadiavineyards.com </div>
                             </div>
                             <div class="col-4">
-                                <a href="mailto:ik@arcadiavineyards.com"  class="btn btn-outline-secondary btn-arcadia"> BAŞVUR</a>
+                                <div class="arc-test btn">
+                                    <a href="mailto:ik@arcadiavineyards.com" type="submit" class="btn">BAŞVUR</a>
+                                </div>
                             </div>
                         </div>
                     </div>

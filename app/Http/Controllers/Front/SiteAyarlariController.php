@@ -14,6 +14,8 @@ use App\Models\Front\Basindan;
 use App\Models\Front\Hikayemiz;
 use App\Models\Front\ArcadiaBaglari;
 use App\Models\Front\Felsefemiz;
+use App\Models\Front\Otel;
+use App\Models\Front\Teruar;
 use App\Models\Front\SiteAyarlari;
 use Illuminate\Http\Request;
 
@@ -86,7 +88,8 @@ class SiteAyarlariController extends Controller
     public function teruarsaraplari()
     {
         $siteAyar = $this->siteAyar;
-        return view('front.teruar-saraplari', compact('siteAyar'));
+        $teruar = Teruar::first();
+        return view('front.teruar-saraplari', compact('siteAyar', 'teruar'));
     }
     public function hikayemiz($slug)
     {
@@ -104,7 +107,8 @@ class SiteAyarlariController extends Controller
     public function bakucha()
     {
         $siteAyar = $this->siteAyar;
-        return view('front.bakuchavineyard', compact('siteAyar', ));
+        $otel = Otel::first();
+        return view('front.bakuchavineyard', compact('siteAyar', 'otel'));
     }
 
 }

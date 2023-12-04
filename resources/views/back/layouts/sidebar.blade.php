@@ -175,6 +175,18 @@
                         <span class="hide-menu">Felsefemiz Sayfa Ayarları</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link @if(request()->is("admin/otel")) @endif" href="{{route("admin.otel-sayfa-ayarlari")}}" aria-expanded="false">
+                        <span><i class="ti ti-news"></i></span>
+                        <span class="hide-menu">Otel Sayfa Ayarları</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link @if(request()->is("admin/teruar")) @endif" href="{{route("admin.teruar-sayfa-ayarlari")}}" aria-expanded="false">
+                        <span><i class="ti ti-news"></i></span>
+                        <span class="hide-menu">Teruar Şarapları Sayfa Ayarları</span>
+                    </a>
+                </li>
 {{--                <li class="sidebar-item">--}}
 {{--                    <a class="sidebar-link has-arrow" href="#" aria-expanded="false">--}}
 {{--                        <span class="d-flex">--}}

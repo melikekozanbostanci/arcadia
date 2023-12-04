@@ -135,8 +135,9 @@
             @endif
             <div class="col-md-12 d-flex align-items-end justify-content-end mt-3">
                 <div class=" d-flex justify-content-end">
-                    <button type="submit" class="btn btn-outline-secondary btn-arcadia">KAYDET</button>
-                    </button>
+                    <div class="arc-test btn">
+                        <a type="submit" class="btn">KAYDET</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -80,8 +80,12 @@ Route::prefix("admin")->middleware("isnotadmin")->group(function () {
     /* FELSEFEMİZ */
 
     /* OTEL */
-    Route::get('/otel-sayfa-ayarlari', 'App\Http\Controllers\Back\OtelController\otelSayfaAyarlari')->name('admin.otel-sayfa-ayarlari');
+    Route::get('/otel-sayfa-ayarlari', 'App\Http\Controllers\Back\Otel@otelSayfaAyarlari')->name('admin.otel-sayfa-ayarlari');
     /* OTEL */
+
+    /* TERUAR */
+    Route::get('/teruar-sayfa-ayarlari', 'App\Http\Controllers\Back\Teruar@teruarSayfaAyarlari')->name('admin.teruar-sayfa-ayarlari');
+    /* TERUAR */
 
     /* ÜRÜNLER */
     Route::get('/urunler', 'App\Http\Controllers\Back\Urun\Urunler@index')->name('admin.urunler');

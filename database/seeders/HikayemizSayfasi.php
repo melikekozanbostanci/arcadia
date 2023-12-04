@@ -92,6 +92,8 @@ Bu da aslında sağlıklı bir ekosistem kurgulayıp, atık oluşumumuzu en aza 
                 'fotograf_arcadia_2' => '',
                 'fotograf_arcadia_3' => '',
                 'fotograf_arcadia_4' => '',
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ];
         DB::table('hikayemiz')->insert($hikayemiz_ayarlar);

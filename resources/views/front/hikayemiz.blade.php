@@ -414,11 +414,11 @@
                                     <div>
                                         @if($hikayemiz->fotograf_arcadia_4)
                                             <a data-fancybox="gallery" data-src="{{ asset('storage/hikayemiz/'.$hikayemiz->fotograf_arcadia_4) }}">
-                                                <img class="img-fluid" src="{{ asset('storage/hikayemiz/'.$hikayemiz->fotograf_arcadia_4) }}"/>
+                                                <img class="img-fluid w-100" src="{{ asset('storage/hikayemiz/'.$hikayemiz->fotograf_arcadia_4) }}"/>
                                             </a>
                                         @else
                                             <a data-fancybox="gallery" data-src="{{asset('assets/front/img/arc2.png')}}">
-                                                <img class="img-fluid" src="{{asset('assets/front/img/arc2.png')}}"/>
+                                                <img class="img-fluid w-100" src="{{asset('assets/front/img/arc2.png')}}"/>
                                             </a>
                                         @endif
                                     </div>
