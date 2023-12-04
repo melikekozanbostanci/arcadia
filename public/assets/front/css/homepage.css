@@ -39,6 +39,9 @@ main{
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
+.btn-check:focus+.btn, .btn:focus {
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%) !important
+}
 .scrolled {
     background-color: #FFFFFF !important; /* Arkaplan rengi beyaz */
     color: #000000 !important; /* Metin rengi siyah */
@@ -78,6 +81,22 @@ header{
     padding: 0.9rem 4.5rem;
     height: auto;
     background-color: transparent;
+}
+.arc-test2{
+    background-image: url(../img/bos-buton.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    color: #fff;
+    padding: 1.1rem 1.5rem;
+    min-width: 230px;
+    height: auto;
+    background-color: transparent;
+}
+.arc-test2:hover{
+    color: #fff !important;
+    border-color: #fff !important;
+    background-color: #71707069;;
 }
 .button-teruar {
     top: 53%;

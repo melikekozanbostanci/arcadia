@@ -502,8 +502,9 @@
                                                             <div class="py-3 me-2" x-show="showButtons">
                                                                 <a href="#"
                                                                    x-on:click="selectedVersion = 'v1'; showButtons = false;">
-                                                                    <button x-show="selectedVersion !== 'v1'"
-                                                                            class="sarap-v1-button"></button>
+                                                                    <div class="arc-test2 btn">
+                                                                        <button x-show="selectedVersion !== 'v1'" class="btn">Nihai Tüketiciyim</button>
+                                                                    </div>
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -511,8 +512,9 @@
                                                             <div class="py-3" x-show="showButtons">
                                                                 <a href="#"
                                                                    x-on:click="selectedVersion = 'v2'; showButtons = false;">
-                                                                    <button x-show="selectedVersion !== 'v2'"
-                                                                            class="sarap-v2-button"></button>
+                                                                    <div class="arc-test2 btn">
+                                                                        <button x-show="selectedVersion !== 'v2'" class="btn">Nihai Tüketici Değilim</button>
+                                                                    </div>
                                                                 </a>
                                                             </div>
                                                         </div>
