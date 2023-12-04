@@ -79,18 +79,18 @@
             </div>
             <div class="container mt-5">
                 <div class="row d-flex justify-content-between align-items-center">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12">
                         <div>
                             <p class="title-homepage mb-0">İNSAN KAYNAKLARI</p>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12">
                         <div class="row d-flex justify-content-between align-items-center">
-                            <div class="col-8">
+                            <div class="col-md-8 col-12">
                                 <div>Başvurularınızı mail ile iletebilirsiniz. </div>
                                 <div>ik@arcadiavineyards.com </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-md-4 col-12 ilet-btn">
                                 <div class="arc-test btn">
                                     <a href="mailto:ik@arcadiavineyards.com" type="submit" class="btn">BAŞVUR</a>
                                 </div>

@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-6 col-sm-12 ko-img">
+                                            <div class="col-lg-3 col-md-6 col-sm-12 ko-img fels-img">
                                                 @if($felsefemiz->fotograf_surdurebilirlik_2)
                                                     <a data-fancybox="gallery" data-src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_2) }}">
                                                         <img class="w-100 h-auto object-fit-cover" src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_2) }}"/>
@@ -92,7 +92,7 @@
                                                     </a>
                                                 @endif
                                             </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-12 ko-img">
+                                            <div class="col-lg-3 col-md-6 col-sm-12 ko-img fels-img">
                                                 @if($felsefemiz->fotograf_surdurebilirlik_3)
                                                     <a data-fancybox="gallery" data-src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_3) }}">
                                                         <img class="w-100 h-auto object-fit-cover" src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_3) }}"/>
@@ -103,7 +103,7 @@
                                                     </a>
                                                 @endif
                                             </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-12 ko-img">
+                                            <div class="col-lg-3 col-md-6 col-sm-12 ko-img fels-img">
                                                 @if($felsefemiz->fotograf_surdurebilirlik_4)
                                                     <a data-fancybox="gallery" data-src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_4) }}">
                                                         <img class="w-100 h-auto object-fit-cover" src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_4) }}"/>
@@ -114,7 +114,7 @@
                                                     </a>
                                                 @endif
                                             </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-12 ko-img">
+                                            <div class="col-lg-3 col-md-6 col-sm-12 ko-img fels-img">
                                                 @if($felsefemiz->fotograf_surdurebilirlik_5)
                                                     <a data-fancybox="gallery" data-src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_5) }}">
                                                         <img class="w-100 h-auto object-fit-cover" src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_5) }}"/>
@@ -176,8 +176,8 @@
                                     <div class="container-fluid">
                                         <div class="row py-md-5">
                                             <div class="col-12">
-                                                <a data-fancybox="gallery" data-src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik6) }}">
-                                                    <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik6) }}"/>
+                                                <a data-fancybox="gallery" data-src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_6) }}">
+                                                    <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/felsefemiz/'.$felsefemiz->fotograf_surdurebilirlik_6) }}"/>
                                                 </a>
                                             </div>
                                         </div>

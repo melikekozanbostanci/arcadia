@@ -79,6 +79,10 @@ header{
     height: auto;
     background-color: transparent;
 }
+.button-teruar {
+    top: 53%;
+    left: 46%;
+}
 .arc-test:hover{
     color: #fff !important;
     border-color: #fff !important;
@@ -180,6 +184,9 @@ header{
     font-size: 4em;
     color: white;
 
+}
+.arc-test-beyaz {
+    padding: 1.4rem 5rem;
 }
 
 @media (max-width: 991px) {
@@ -522,6 +529,9 @@ footer{
     padding: 3rem;
     bottom: -329%;
 }
+.fels-img img{
+    min-height: 400px ;
+}
 @media (max-width: 991px) and (min-width: 768px) {
     .arcadia {
         font-size: 3.5rem !important;
@@ -535,9 +545,19 @@ footer{
         padding-bottom: 1rem;
     }
 }
+@media (max-width: 1440px) and (min-width: 1024px) {
+    .ply {
+        left: 45%;
+        top: 45%;
+    }
+}
 @media (max-width: 1400px) and (min-width: 1201px) {
     .centered-text{
         font-size: 4.5rem;
+    }
+    .ply {
+        left: 45%;
+        top: 45%;
     }
 }
 @media (max-width: 1200px) and (min-width: 992px) {
@@ -559,6 +579,7 @@ footer{
         bottom: -150%;
     }
 }
+
 
 .download-text{
     font-family: "Barlow Condensed";
@@ -834,11 +855,12 @@ footer{
         left: 25%;
     }
     .button-teruar {
-        top: 50%;
-        left: 43%;
+        top: 53%;
+        left: 44%;
     }
+
     .arc-test-beyaz {
-        padding: 0.1rem 1rem;
+        padding: 0.4rem 2rem;
     }
     .button-teruar a {
         padding: 0.4rem 2.2rem;
@@ -1015,9 +1037,9 @@ footer{
         top: 24%;
         font-size: 1.2rem;
     }
-    .button-teruar {
-        top: 40%;
-        left: 39%;
+    .button-teruar a {
+        padding: 0rem 2rem;
+        font-size: 1rem;
     }
     .button-teruar button {
         padding: 1.13rem 4.75rem;
@@ -1025,6 +1047,10 @@ footer{
     .border-button {
         padding: 2rem 4.5rem;
         width: 26%;
+    }
+    .button-teruar {
+        top: 30%;
+        left: 36%;
     }
     .left-side{
         height: 0;
@@ -1176,4 +1202,54 @@ footer{
     width:100%;
     height: 250px;
     object-fit: cover;
+}
+
+@media screen and (max-width: 320px) {
+    .ko-img{
+        padding-bottom: 1rem;
+    }
+    .arcadia {
+        font-size: 2.5rem !important;
+    }
+    .arc-abs {
+        top: -1%;
+        right: 0%;
+    }
+    .arc-abs2 {
+        left: 0%;
+        padding: 0rem;
+        bottom: -50%;
+    }
+    .letter-space {
+        letter-spacing: 0.05rem;
+    }
+    .arc-uzum-img{
+        min-height: 220px;
+    }
+    .arc-uzum{
+        font-size: 0.58rem !important;
+    }
+    .arc-test-beyaz {
+        padding: 0.4rem 2rem;
+    }
+    .button-teruar {
+        top: 27%;
+        left: 32%;
+    }
+    .thar{
+        height: auto;
+    }
+    .arc-test {
+        padding: 0.9rem 4rem;
+    }
+    .bag-har{
+        min-height: 300px;
+        object-fit: cover !important;
+    }
+    .img-cls-title {
+        font-size: 0.75rem;
+    }
+    .ilet-btn{
+        padding-top: 1rem;
+    }
 }

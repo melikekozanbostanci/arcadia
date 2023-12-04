@@ -140,11 +140,11 @@
                                                     <div>
                                                         @if($baglar->fotograf_arcadia_2)
                                                             <a data-fancybox="gallery" data-src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_2) }}">
-                                                                <img class="w-100 baslik-foto" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_2) }}"/>
+                                                                <img class="w-100 baslik-foto thar" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_2) }}"/>
                                                             </a>
                                                         @else
                                                             <a data-fancybox="gallery" data-src="{{asset('assets/front/img/arc-title.png')}}">
-                                                                <img class="w-100 baslik-foto" src="{{asset('assets/front/img/arc-title.png')}}"/>
+                                                                <img class="w-100 baslik-foto thar" src="{{asset('assets/front/img/arc-title.png')}}"/>
                                                             </a>
                                                         @endif
                                                     </div>
@@ -179,8 +179,8 @@
                                     </div>
                                 </section>
                                 <section class="pb-md-5 position-relative">
-                                    <img class="img-fluid w-100" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_1) }}" alt="">
-                                    <div class="position-absolute d-flex justify-content-center align-items-center flex-column top-0 text-white fs-2 w-100 h-100 letter-space pt-3">
+                                    <img class="img-fluid w-100 arc-uzum-img" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_1) }}" alt="">
+                                    <div class="position-absolute d-flex justify-content-center align-items-center flex-column top-0 text-white fs-2 w-100 h-100 letter-space pt-3 arc-uzum">
                                         <p>{!! $baglar->fotograf_uzum_1_aciklama !!}</p>
                                         <p>{!! $baglar->fotograf_uzum_1_aciklama2 !!}</p>
                                     </div>
@@ -262,7 +262,7 @@
                                         <div class="row mt-md-5">
                                             <div class="col-12 mt-lg-5">
                                                 <p class="title-homepage m-0">{{$baglar->baslik_bag}}</p>
-                                                <p class="sub-title-homepage d-flex justify-content-start align-items-center">
+                                                <p class="sub-title-homepage d-flex justify-content-start align-items-center ">
                                                     <img src="{{asset('assets/front/img/line.svg')}}" alt="">
                                                     <span>{{$baglar->alt_baslik_bag}}</span>
                                                 </p>
@@ -276,11 +276,11 @@
                                                     <div>
                                                         @if($baglar->fotograf_bag)
                                                             <a data-fancybox="gallery" data-src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_bag) }}">
-                                                                <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_bag) }}"/>
+                                                                <img class="w-100 h-auto object-fit-contain bag-har" src="{{ asset('storage/arcadia-baglari/'.$baglar->fotograf_bag) }}"/>
                                                             </a>
                                                         @else
                                                             <a data-fancybox="gallery" data-src="{{ asset('assets/front/img/harita.png' ) }}">
-                                                                <img class="w-100 h-auto object-fit-contain" src="{{ asset('assets/front/img/harita.png' )}}"/>
+                                                                <img class="w-100 h-auto object-fit-contain bag-har" src="{{ asset('assets/front/img/harita.png' )}}"/>
                                                             </a>
                                                         @endif
                                                     </div>
@@ -497,8 +497,8 @@
                                                 </div>
                                                 <div x-data="{ selectedVersion: null, showButtons: true }"
                                                      class="col-md-12 col-sm-12  pt-5 d-flex justify-content-center align-items-center">
-                                                    <div class="row">
-                                                        <div class="col-md-6 col-12">
+                                                    <div class="row ">
+                                                        <div class="col-md-6 col-12 d-flex justify-content-center">
                                                             <div class="py-3 me-2" x-show="showButtons">
                                                                 <a href="#"
                                                                    x-on:click="selectedVersion = 'v1'; showButtons = false;">
@@ -507,7 +507,7 @@
                                                                 </a>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 col-12">
+                                                        <div class="col-md-6 col-12 d-flex justify-content-center">
                                                             <div class="py-3" x-show="showButtons">
                                                                 <a href="#"
                                                                    x-on:click="selectedVersion = 'v2'; showButtons = false;">

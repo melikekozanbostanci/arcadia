@@ -13,6 +13,14 @@
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/front/img/favicon.svg') }}">
     @endif
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ $siteAyar->site_google_analytics }}');
+    </script>
+
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('assets/front/css/bootstrap.min.css')}}">
