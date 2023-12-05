@@ -148,7 +148,7 @@ header{
      box-shadow: none !important;
  }
  .ko-img img{
-     max-height: 400px;
+     max-height: 350px;
  }
  .baslik-foto{
      min-height: 300px;
@@ -474,6 +474,12 @@ footer{
     background-color: #222222;
     color: #FFFFFF;
 }
+
+.teruar-img img{
+    max-height: 450px;
+    object-fit: cover;
+    min-height: 449px;
+}
 .arcadia{
     font-family: "Barlow Condensed";
     font-size: 4.5rem !important;
@@ -599,6 +605,9 @@ footer{
     }
 }
 
+.btn{
+    font-family: "Barlow Condensed" !important;
+}
 
 .download-text{
     font-family: "Barlow Condensed";
@@ -648,7 +657,9 @@ footer{
 }
 
 /*# swiper*/
-
+.swiper-slide {
+    width: 100% !important;
+}
 .container-sw {
     display: flex;
     justify-content: center;
@@ -671,7 +682,7 @@ footer{
 }
 .timeline .swiper-container {
     height: 700px;
-    width: 100vw;
+    width: 100%;
     position: relative;
 }
 .timeline .swiper-wrapper {
@@ -816,7 +827,17 @@ footer{
     background-color: #71707069;
 }
 
+.arc-uzum p{
+
+}
 @media screen and (min-width: 768px) {
+
+    .img-cls-title {
+        font-size: 1.2rem;
+    }
+    .navbar{
+        min-height: 57px;
+    }
     .timeline .swiper-slide::after {
         right: 60%;
         bottom: -17%;
@@ -903,6 +924,15 @@ footer{
     }
 }
 @media screen and (max-width: 768px) and (min-width:577px){
+    .teruar-img img{
+        max-height: 400px;
+        object-fit: cover;
+        min-height: 400px;
+        padding-bottom: 1rem;
+    }
+    .w-sm-100{
+        width: 100% !important;
+    }
     .arcadia{
         font-size: 3.5rem !important;
     }
@@ -916,7 +946,7 @@ footer{
     }
     .arc-abs2 {
         position: absolute;
-        top: -250%;
+        top: -271%;
         left: 0%;
     }
     .canvas-max {
@@ -997,6 +1027,21 @@ footer{
     }
 }
 @media screen and (max-width: 576px) and (min-width:321px){
+    .ko-img img {
+        max-height: 300px;
+    }
+    .fels-img img {
+        min-height: 2500px;
+    }
+    .teruar-img img{
+        max-height: 350px;
+        object-fit: cover;
+        min-height: 350px;
+        padding-bottom: 1rem;
+    }
+    .w-sm-100{
+        width: 100% !important;
+    }
     .centered-text {
         font-size: 2rem;
         top: 40%;
@@ -1109,7 +1154,113 @@ footer{
         margin-top: 1rem;
     }
 }
+@media screen and (max-width: 426px){
+    .card-arc{
+        margin: 1.5rem 0rem;
+    }
+}
+@media screen and (max-width: 376px){
+    iframe {
+        max-height:350px ;
+    }
+    .left-text {
+        text-align: left;
+    }
+    .bag-har{
+        min-height: 300px;
+        object-fit: cover !important;
+    }
+    .w-sm-100{
+        width: 100% !important;
+    }
+    .arc-test-beyaz {
+        padding: 0.2rem 0.2rem !important;
+    }
+    .arc-test {
+        padding: 0.2rem 2.3rem;
+    }
+    .arc-abs2 {
+        top: -157%;
+        padding: 0rem;
+    }
+    .arc-uzum-img{
+        min-height: 260px;
+        object-fit: cover !important;
+    }
+    .arc-uzum p{
+        font-size: .7rem !important;
+        padding-left: 0.5rem;
+    }
+}
 @media screen and (max-width: 320px) {
+    .left-text{
+        padding-left: 0 !important;
+    }
+    .grapeImage{
+        display: none;
+    }
+    .button-teruar{
+        display: none;
+    }
+    .bg-down-text {
+        left: 42%;
+    }
+    .ko-img img {
+        max-height: 250px;
+    }
+    .fels-img img {
+        min-height: 200px;
+    }
+    .arc-test {
+        padding: 0.1rem 2.5rem;
+    }
+    .w-sm-100{
+        width: 100% !important;
+    }
+    .ko-img{
+        padding-bottom: 1rem;
+    }
+    .arcadia {
+        font-size: 2.5rem !important;
+    }
+    .arc-abs {
+        top: -1%;
+        right: 0%;
+    }
+    .arc-abs2 {
+        left: 0%;
+        padding: 0rem;
+        bottom: -50%;
+    }
+    .letter-space {
+        letter-spacing: 0.05rem;
+    }
+    .arc-uzum-img{
+        min-height: 250px;
+    }
+    .arc-uzum{
+        font-size: 0.58rem !important;
+    }
+    .arc-test-beyaz {
+        padding: 0.4rem 2rem;
+    }
+    .button-teruar {
+        top: 27%;
+        left: 32%;
+    }
+    .thar{
+        height: auto;
+    }
+    .bag-har{
+        min-height: 300px;
+        object-fit: cover !important;
+    }
+    .img-cls-title {
+        font-size: 0.75rem;
+    }
+    .ilet-btn{
+        padding-top: 1rem;
+    }
     .back-color img {
         min-height: 271px;
     }
@@ -1223,52 +1374,4 @@ footer{
     object-fit: cover;
 }
 
-@media screen and (max-width: 320px) {
-    .ko-img{
-        padding-bottom: 1rem;
-    }
-    .arcadia {
-        font-size: 2.5rem !important;
-    }
-    .arc-abs {
-        top: -1%;
-        right: 0%;
-    }
-    .arc-abs2 {
-        left: 0%;
-        padding: 0rem;
-        bottom: -50%;
-    }
-    .letter-space {
-        letter-spacing: 0.05rem;
-    }
-    .arc-uzum-img{
-        min-height: 220px;
-    }
-    .arc-uzum{
-        font-size: 0.58rem !important;
-    }
-    .arc-test-beyaz {
-        padding: 0.4rem 2rem;
-    }
-    .button-teruar {
-        top: 27%;
-        left: 32%;
-    }
-    .thar{
-        height: auto;
-    }
-    .arc-test {
-        padding: 0.9rem 4rem;
-    }
-    .bag-har{
-        min-height: 300px;
-        object-fit: cover !important;
-    }
-    .img-cls-title {
-        font-size: 0.75rem;
-    }
-    .ilet-btn{
-        padding-top: 1rem;
-    }
-}
+

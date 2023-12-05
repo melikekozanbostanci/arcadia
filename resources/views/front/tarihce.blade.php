@@ -6,7 +6,7 @@
     <main>
 
         <section class="pt-5">
-            <div class="container-sw pt-md-5">
+            <div class="container-sw pt-lg-5">
                 <div class="timeline">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">

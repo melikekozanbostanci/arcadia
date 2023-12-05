@@ -271,7 +271,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="position-relative">
+                                    <div class="position-relative card-arc">
                                                 @if($hikayemiz->fotograf_bag_4)
                                                     <a data-fancybox="gallery" data-src="{{ asset('storage/hikayemiz/'.$hikayemiz->fotograf_bag_4) }}">
                                                         <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/hikayemiz/'.$hikayemiz->fotograf_bag_4) }}"/>
@@ -287,7 +287,7 @@
                                                     </div>
                                                 </div>
                                     </div>
-                                    <div class="container py-5">
+                                    <div class="container py-md-5">
                                         <div class="row">
                                             <div class="col-12">
                                                 <p class="paragraph-detail">

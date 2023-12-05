@@ -140,11 +140,11 @@
                                                     <div>
                                                         @if($baglar->fotograf_arcadia_2)
                                                             <a data-fancybox="gallery" data-src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_2) }}">
-                                                                <img class="w-100 baslik-foto thar" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_2) }}"/>
+                                                                <img class="w-100 thar" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_arcadia_2) }}"/>
                                                             </a>
                                                         @else
                                                             <a data-fancybox="gallery" data-src="{{asset('assets/front/img/arc-title.png')}}">
-                                                                <img class="w-100 baslik-foto thar" src="{{asset('assets/front/img/arc-title.png')}}"/>
+                                                                <img class="w-100 thar" src="{{asset('assets/front/img/arc-title.png')}}"/>
                                                             </a>
                                                         @endif
                                                     </div>
@@ -180,7 +180,7 @@
                                 </section>
                                 <section class="pb-md-5 position-relative">
                                     <img class="img-fluid w-100 arc-uzum-img" src="{{asset('storage/arcadia-baglari/'.$baglar->fotograf_uzum_1) }}" alt="">
-                                    <div class="position-absolute d-flex justify-content-center align-items-center flex-column top-0 text-white fs-2 w-100 h-100 letter-space pt-3 arc-uzum">
+                                    <div class="position-absolute d-flex justify-content-center align-items-center flex-column top-0 text-white w-100 h-100 letter-space pt-3 arc-uzum">
                                         <p>{!! $baglar->fotograf_uzum_1_aciklama !!}</p>
                                         <p>{!! $baglar->fotograf_uzum_1_aciklama2 !!}</p>
                                     </div>
@@ -192,7 +192,6 @@
                                             <div class="col-md-6 col-sm-12 ">
                                                 <p class="paragraph-detail">
                                                    {!! $baglar->aciklama_uzum_alan2 !!}
-
                                                 </p>
                                             </div>
                                             <div class="col-md-6 col-sm-12  d-flex justify-content-center">
@@ -522,11 +521,11 @@
 
 
 
-                                                    <div class="w-75"
+                                                    <div class="w-75 w-sm-100"
                                                          x-show="selectedVersion === 'v1' || selectedVersion === 'v2'">
-                                                        <div class="my-3">
+                                                        <div class="my-3 d-flex justify-content-md-start justify-content-sm-end ">
                                                             <div class="arc-test btn">
-                                                                <a href="" class="btn">Geri Dön</a>
+                                                                <a href="" class="btn">Geri</a>
                                                             </div>
                                                         </div>
                                                         <!-- v1 veya v2 Form Content -->

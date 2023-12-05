@@ -112,14 +112,28 @@
 </script>
 <script>
     $(document).ready(function () {
-        var brCount = 0;
+        var lastWasBr = false;
+
         $('br').each(function () {
-            brCount++;
-            if (brCount > 1) {
+            if (lastWasBr) {
                 $(this).remove();
-                brCount = 0;
             }
+
+            lastWasBr = !lastWasBr;
         });
+
+        $('ul.left-text').html(function (_, html) {
+            return html.replace(/(<br>)+/g, '<br>');
+        });
+
+        $('ul.right-text').html(function (_, html) {
+            return html.replace(/(<br>)+/g, '<br>');
+        });
+
+        $('.paragraph-detail').html(function (_, html) {
+            return html.replace(/(<br>)+/g, '<br>');
+        });
+
     });
 </script>
 <script>
@@ -137,7 +151,6 @@
           // İlgili tab'ı manuel olarak aktive et
           showTabContentBySlug(clickedTab.replace("#", ""));
       });
-
       // Sayfa yüklendiğinde tab içeriğini göster
       var matches = currentPageUrl.match(/\/hikayemiz\/([^\/]+)/);
       if (matches && matches[1]) {

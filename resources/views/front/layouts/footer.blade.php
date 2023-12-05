@@ -5,9 +5,9 @@
         <div class="col-12 py-md-5 d-flex justify-content-center">
             <a href="{{ url('/') }}">
                 @if($siteAyar->site_beyaz_logo != null)
-                    <img src="{{ asset('storage/site-ayar/'.$siteAyar->site_beyaz_logo) }}" alt="">
+                    <img class="img-fluid" src="{{ asset('storage/site-ayar/'.$siteAyar->site_beyaz_logo) }}" alt="">
                 @else
-                    <img src="{{ asset('assets/front/img/white_logo.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/front/img/white_logo.svg') }}" alt="">
                 @endif
 
             </a>

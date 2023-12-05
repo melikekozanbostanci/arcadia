@@ -4,11 +4,11 @@
 @section('content')
     <!-- main-area -->
     <main>
-        <section>
+        <section class="position-relative">
             @if($teruar->fotograf_ana)
-                <img class="w-100 position-relative baslik-foto" src="{{ asset("storage/teruar/$teruar->fotograf_ana") }}" alt="">
+                <img class="w-100  baslik-foto" src="{{ asset("storage/teruar/$teruar->fotograf_ana") }}" alt="">
             @else
-            <img class="w-100 position-relative baslik-foto" src="{{ asset('assets/front/img/t1.png') }}" alt="">
+            <img class="w-100 baslik-foto" src="{{ asset('assets/front/img/t1.png') }}" alt="">
             @endif
             <div class="position-absolute arcadia">
                 <p class="text-center text-white">{{$teruar->baslik}}</p>
@@ -33,30 +33,30 @@
                 </div>
             </div>
             <div class="container-fluid">
-                <div class="row">
+                <div class="row teruar-img">
                     @if($teruar->fotograf_1)
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
                             <a data-fancybox="gallery" data-src="{{ asset('storage/teruar/'.$teruar->fotograf_1) }}">
                                 <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/teruar/'.$teruar->fotograf_1) }}"/>
                             </a>
                         </div>
                     @endif
                         @if($teruar->fotograf_2)
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                 <a data-fancybox="gallery" data-src="{{ asset('storage/teruar/'.$teruar->fotograf_2) }}">
                                     <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/teruar/'.$teruar->fotograf_2) }}"/>
                                 </a>
                             </div>
                         @endif
                         @if($teruar->fotograf_3)
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                 <a data-fancybox="gallery" data-src="{{ asset('storage/teruar/'.$teruar->fotograf_3) }}">
                                     <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/teruar/'.$teruar->fotograf_3) }}"/>
                                 </a>
                             </div>
                         @endif
                         @if($teruar->fotograf_4)
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                 <a data-fancybox="gallery" data-src="{{ asset('storage/teruar/'.$teruar->fotograf_4) }}">
                                     <img class="w-100 h-auto object-fit-contain" src="{{ asset('storage/teruar/'.$teruar->fotograf_4) }}"/>
                                 </a>

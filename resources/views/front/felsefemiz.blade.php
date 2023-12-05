@@ -187,17 +187,17 @@
 
                             </div>
                             <div class="tab-pane fade" aria-labelledby="arcadia-fauna-tab" id="arcadia-fauna">
-                                <section class="mt-5">
-                                    <div class="container pb-5">
+                                <section class="mt-md-5">
+                                    <div class="container pb-md-5">
                                         <div class="row">
-                                            <div class="col-md-6 col-sm-12 mt-5">
+                                            <div class="col-md-6 col-sm-12 mt-md-5">
                                                 <p class="title-homepage m-0">{{$felsefemiz->baslik_fauna}}</p>
                                                 <p class="sub-title-homepage d-flex justify-content-start align-items-center">
                                                     <img src="{{asset('assets/front/img/line.svg')}}" alt="">
                                                     <span>{{$felsefemiz->alt_baslik_fauna}} </span>
                                                 </p>
                                             </div>
-                                            <div class="col-md-6 col-sm-12 mt-5">
+                                            <div class="col-md-6 col-sm-12 mt-md-5">
                                                 @foreach($fauna as $item)
                                                     @if($item->aciklama)
                                                         <p class="paragraph-detail">

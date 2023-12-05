@@ -226,14 +226,8 @@
         </div>
         <div class="row mb-2">
             <div class="col-md-12">
-                <label class="form-label">Anasayfa Fotoğraf 3</label>
-                <div wire:ignore>
-                    @if($fotograf_3_temp)
-                        <input type="file" wire:model="fotograf_3" class="dropify" data-default-file="{{asset("storage/site-ayar/$fotograf_3_temp")}}"/>
-                    @else
-                        <input type="file" wire:model="fotograf_3" class="dropify" />
-                    @endif
-                </div>
+                <label class="form-label">Anasayfa Video Alanı (youtube üzerinden aldığınız iframe kodu yapıştırınız. *width:100% ve height:450 ayarlayınız)</label>
+                <textarea wire:model="fotograf_3" class="form-control mb-2 @error('fotograf_3') is-invalid @enderror" id="fotograf_3" placeholder="Anasayfa Video Alanı"></textarea>
                 @error('fotograf_3') <p><span class="text-danger">{{ $message }}</span></p> @enderror
             </div>
         </div>

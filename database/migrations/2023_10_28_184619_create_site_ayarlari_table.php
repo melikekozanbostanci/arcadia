@@ -43,7 +43,7 @@ return new class extends Migration
             $table->longText('aciklama_2_1');
             $table->longText('aciklama_2_2');
             $table->string('fotograf_2');
-            $table->string('fotograf_3');
+            $table->longText('fotograf_3');
             $table->string('baslik_3');
             $table->string('alt_baslik_3');
             $table->longText('aciklama_3');

@@ -107,15 +107,15 @@
                     </div>
                         <div class="container">
                             <div class="d-flex align-items-center justify-content-between">
-                                <div class="col-md-4 col-sm-5">
+                                <div class="col-md-4 col-sm-6">
                                     <ul class="left-text">
                                         {!! $siteAyar->aciklama_2_1 !!}
                                     </ul>
                                 </div>
-                                <div class="col-md-4 col-sm-2 grapeImage">
+                                <div class="col-md-4 d-sm-none grapeImage">
                                     <img class="w-100 h-auto object-fit-contain" src="{{ asset('assets/front/img/arcadia-uzum.png') }}" alt="">
                                 </div>
-                                <div class="col-md-4 col-sm-5">
+                                <div class="col-md-4 col-sm-6">
                                     <ul class="right-text">
                                         {!! $siteAyar->aciklama_2_2 !!}
                                     </ul>
@@ -186,14 +186,10 @@
         </section>
         <section class="position-relative">
             @if($siteAyar->fotograf_3)
-                <img class="img-fluid w-100" src="{{ asset('storage/site-ayar/'.$siteAyar->fotograf_3) }}" alt="">
+              {!! $siteAyar-> fotograf_3 !!}
             @else
-            <img class="img-fluid w-100 pt-5" src="{{ asset('assets/front/img/video-image.png') }}" alt="">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/QaFLzC6FDPA?si=ejBrWKvd2UMOn2qG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             @endif
-
-            <div class="position-absolute ply">
-                <i class="fa-regular fa-circle-play play-icon btn"></i>
-            </div>
         </section>
         <section>
             <div class="container pt-5">

@@ -1,6 +1,6 @@
 <!-- header-area -->
 <header>
-    <nav class="navbar navbar-expand-lg bg-transparent p-0">
+    <nav class="navbar navbar-expand-lg bg-transparent p-md-0">
         <div class="container d-flex justify-content-center">
             <div class="row">
                 <div class="col-12">

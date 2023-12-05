@@ -48,7 +48,6 @@ class SiteAyarForm extends Component
     public $fotograf_2;
     public $fotograf_2_temp;
     public $fotograf_3;
-    public $fotograf_3_temp;
     public $baslik_3;
     public $alt_baslik_3;
     public $aciklama_3;
@@ -128,6 +127,7 @@ class SiteAyarForm extends Component
             'baslik_3' => 'required',
             'alt_baslik_3' => 'required',
             'aciklama_3' => 'required',
+            'fotograf_3' => 'required',
         ], [
             'site_adi.required' => 'Site adı alanı zorunludur.',
             'site_baslik.required' => 'Site başlık alanı zorunludur.',
@@ -144,6 +144,7 @@ class SiteAyarForm extends Component
             'baslik_3.required' => 'Bu alan zorunludur.',
             'alt_baslik_3.required' => 'Bu alan zorunludur.',
             'aciklama_3.required' => 'Bu alan zorunludur.',
+            'fotograf_3.required' => 'Bu alan zorunludur.',
         ]);
 
         $siteAyar = SiteAyar::first();
@@ -158,7 +159,6 @@ class SiteAyarForm extends Component
         $fotograf_ana=$this->fotograf_ana_temp;
         $fotograf_1=$this->fotograf_1_temp;
         $fotograf_2=$this->fotograf_2_temp;
-        $fotograf_3=$this->fotograf_3_temp;
         $fotograf_4=$this->fotograf_4_temp;
         $fotograf_5=$this->fotograf_5_temp;
         $fotograf_6=$this->fotograf_6_temp;
@@ -237,17 +237,6 @@ class SiteAyarForm extends Component
             $this->fotograf_2->storeAs('public/site-ayar', $fotograf_2);
         }
 
-        if ($this->fotograf_3) {
-            $this->validate([
-                'fotograf_3' => 'image|max:2048',
-            ], [
-                'fotograf_3.image' => 'Fotoğraf 3 alanı resim dosyası olmalıdır.',
-                'fotograf_3.max' => 'Fotoğraf 3 alanı en fazla 2MB olmalıdır.',
-            ]);
-
-            $fotograf_3 = md5($this->fotograf_3 . microtime()) . '.' . $this->fotograf_3->extension();
-            $this->fotograf_3->storeAs('public/site-ayar', $fotograf_3);
-        }
 
         if ($this->fotograf_4) {
             $this->validate([
@@ -341,7 +330,7 @@ class SiteAyarForm extends Component
         $site_ayarlari->aciklama_2_1 = nl2br($this->aciklama_2_1);
         $site_ayarlari->aciklama_2_2 = nl2br($this->aciklama_2_2);
         $site_ayarlari->fotograf_2 = $fotograf_2;
-        $site_ayarlari->fotograf_3 = $fotograf_3;
+        $site_ayarlari->fotograf_3 = $this->fotograf_3;
         $site_ayarlari->baslik_3 = $this->baslik_3;
         $site_ayarlari->alt_baslik_3 = $this->alt_baslik_3;
         $site_ayarlari->aciklama_3 = nl2br($this->aciklama_3);
